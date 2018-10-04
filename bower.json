@@ -1,0 +1,25 @@
+{
+  "name": "spotsense-landing-page",
+  "homepage": "https://spotsense.io",
+  "authors": [
+      "SpotSense"
+  ],
+  "description": "Location awareness made simple.",
+  "main": "gulpfile.js",
+  "keywords": [
+      "argon",
+      "location",
+      "geofence",
+      "iOS",
+      "bootstrap",
+      "design",
+      "google",
+      "twitter"
+  ],
+  "license": "MIT",
+  "ignore": [
+      "**/.*",
+      "node_modules",
+      "bower_components"
+  ]
+}

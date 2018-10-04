@@ -1,0 +1,13 @@
+{
+  "name": "spotsenseio/spotsense-landing-page",
+  "description": "Location awareness made simple",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "SpotSense (Sonora Data, LLC)",
+      "email": "hello@spotsense.io"
+    }
+  ],
+  "require": {}
+}
