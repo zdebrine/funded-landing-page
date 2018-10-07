@@ -623,6 +623,7 @@ $dropdown-link-active-bg:           $component-active-bg !default;
 $nav-link-padding-y:                .25rem !default;
 $nav-link-padding-x:                .75rem !default;
 $nav-link-color:                    $gray-700 !default;
+// $nav-link-color:                    #32325d !default;
 $nav-link-disabled-color:           $gray-600 !default;
 
 $nav-pills-padding-y:               .75rem !default;
@@ -661,6 +662,7 @@ $navbar-dark-bg:                    transparent !default;
 $navbar-dark-hover-bg:              rgba(255, 255, 255, .1);
 $navbar-dark-active-bg:             rgba(255, 255, 255, .1);
 $navbar-dark-color:                 rgba($white, .95);
+// $navbar-dark-color:                 #32325d;
 $navbar-dark-hover-color:           rgba($white, .65);
 $navbar-dark-active-color:          rgba($white, .65);
 $navbar-dark-disabled-color:        rgba($white, .25);
