@@ -6,8 +6,8 @@
   "author": "SpotSense (Sonora Data, LLC)",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy-dev": "npm run build && aws s3 sync build/ s3://landing-test.spotsense.io",
-    "deploy-prod": "npm run build && aws s3 sync build/ s3://spotsense.io"
+    "deploy-dev": "gulp build && aws s3 sync . s3://landing-test.spotsense.io --exclude 'node_modules/*' --exclude 'examples/*' --exclude 'docs/*' --exclude '.git/*'",
+    "deploy-prod": "gulp build && aws s3 sync . s3://spotsense.io --exclude 'node_modules/*' --exclude 'examples/*' --exclude 'docs/*' --exclude '.git/*'"
   },
   "devDependencies": {
     "browser-sync": "^2.24.4",
