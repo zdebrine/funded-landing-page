@@ -70,13 +70,13 @@
           </ul>
           <ul class="navbar-nav align-items-lg-center ml-lg-auto">
             <li class="nav-item">
-              <a class="nav-link nav-link-icon" href="https://github.com/spotsenseio" target="_blank" data-toggle="tooltip" title="Star us on Github">
+              <a id="github-icon" class="nav-link nav-link-icon" href="https://github.com/spotsenseio" target="_blank" data-toggle="tooltip" title="Star us on Github">
                 <i class="fab fa-github"></i>
                 <span class="nav-link-inner--text d-lg-none">Github</span>
               </a>
             </li>
             <li class="nav-item d-none d-lg-block ml-lg-4">
-              <a href="http://dashboard.spotsense.io" target="_blank" class="btn btn-neutral btn-icon">
+              <a id="dashboard-header" href="http://dashboard.spotsense.io" target="_blank" class="btn btn-neutral btn-icon">
                 <span class="btn-inner--icon">
                   <i class="fas fa-chart-line"></i>
                 </span>
@@ -124,11 +124,11 @@
             </div>
         </div>
         <!-- SVG separator -->
-        <div class="separator separator-bottom separator-skew zindex-100">
+        <!-- <div class="separator separator-bottom separator-skew zindex-100">
           <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
           </svg>
-        </div>
+        </div> -->
       </section>
     </div>
 
@@ -193,12 +193,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDele
 
     <section class="section bg-secondary">
       <div class="container">
-        <div style="margin-bottom: 34px;" class="row justify-content-center">
-            <h1 class="mb-0">Monitor Places + Understand Your Users</h1>
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                  <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                </div>
+        <div class="row justify-content-center">
+          <h1 class="mb-0">Monitor Places + Understand Your Users</h1>
+        </div>
+        
+        <div class="row" style="margin-bottom: 34px;">
+            <div class="col-md-8 offset-md-2">
+              <p class="description">Monitor places to see when your users enter, exit, dwell, and return to the boundaries of your geofence</p>
             </div>
         </div>
 
@@ -207,7 +208,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDele
               <img style="max-width: 100%" src="./assets/img/buildings/geobuilding.png" alt="single building with geofence surrounding it">
             </div>
             <div class="col-md-8">
-                <h5>Average Dwell Time: <span style="color: blue">23m </span></h5>
+                <h5 style="padding-left: 16px"><strong>Place: </strong>Bill's BBQ</h5>
                 <table class="table" style="margin-top: 10px;">
                     <thead>
                       <tr>
@@ -219,6 +220,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDele
                       </tr>
                     </thead>
                     <tbody>
+                      <tr>
+                        <th scope="row">Maroon Koala</th>
+                        <td>11:21am</td>
+                        <td>2:03pm</td>
+                        <td>2 hr 42 min</td>
+                        <td>8</td>
+                      </tr>
                       <tr>
                         <th scope="row">Purple Panda</th>
                         <td>1:03pm</td>
@@ -233,13 +241,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDele
                         <td>3 min</td>
                         <td>1</td>
                       </tr>
-                      <tr>
-                        <th scope="row">Maroon Koala</th>
-                        <td>11:21am</td>
-                        <td>2:03pm</td>
-                        <td>2hr 42 min</td>
-                        <td>8</td>
-                      </tr>
+                      
                     </tbody>
                   </table>
                 
@@ -255,7 +257,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDele
             <h1 class="mb-0">Turn analytics into relevant actions for your users</h1>
             <div class="row">
                 <div class="col-md-8 offset-md-2">
-                  <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                  <p class="description">Choose areas to monitor for the presence of your users and gain insights to how they move throughout these locations, all in a secure way</p>
                 </div>
             </div>
         </div>
@@ -266,12 +268,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDele
               <div class="col-lg-4">
                 <div class="card shadow border-0">
                   <div class="card-body py-5">
-                    <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
-                      <!-- <i class="fas fa-globe-americas"></i> -->
-                      <span>1.</span>
+                    <div class="text-center mb-4">
+                        <i class="fas fa-4x fa-building"></i>
                     </div>
-                    <h6 class="text-primary text-uppercase">Add the SDK</h6>
-                    <p class="description mt-3">Download the SDK via Cocoapods, GitHub, or get started with a template</p>
+                    <h6 class="text-primary">1. Choose a Place</h6>
+                    <p class="description mt-3">Draw a location around any place where you want your users to have an interaction</p>
                     <div>
 
                     </div>
@@ -283,11 +284,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDele
               <div class="col-lg-4">
                 <div class="card shadow border-0">
                   <div class="card-body py-5">
-                    <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
+                    <div class="text-center mb-4">
                       <!-- <i class="fas fa-bolt"></i> -->
-                      <span>2.</span>
+                      <i class="far fa-4x fa-bell"></i>
                     </div>
-                    <h6 class="text-primary text-uppercase">Create a rule</h6>
+                    <h6 class="text-primary">2. Choose an Action</h6>
                     <p class="description mt-3">Send a notification, do an HTTP request, change screens, or just people watch!</p>
                     <div>
 
@@ -300,12 +301,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDele
               <div class="col-lg-4">
                 <div class="card shadow border-0">
                   <div class="card-body py-5">
-                    <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
-                      <!-- <i class="fas fa-chart-pie"></i> -->
-                      <span>3.</span>
+                    <div class="text-center mb-4">
+                        <i class="fas fa-4x fa-rocket"></i>
                     </div>
-                    <h6 class="text-primary text-uppercase">Test it out</h6>
-                    <p class="description mt-3">Jump into the real world and test out your rule!</p>
+                    <h6 class="text-primary">3. Launch</h6>
+                    <p class="description mt-3">Launch your geofence to your app without resubmitting it to the App Store</p>
                     <div>
                     </div>
                     <a href="#" class="btn btn-success mt-4">Test</a>
@@ -320,84 +320,28 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDele
       </div>
     </section>
     
-    
-    
-    
-    <!-- <section class="section section-shaped">
-      <div class="shape shape-style-1 shape-default">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="container py-md">
-        <div class="row justify-content-between align-items-center">
-          <div class="col-lg-5 mb-5 mb-lg-0">
-            <h1 class="text-white font-weight-light">Use Cases</h1>
-            <p class="lead text-white mt-4">Argon Design System comes with four pre-built pages to help you get started faster. You can change the text and images and you're good to go.</p>
-            <a href="https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html" class="btn btn-white mt-4">See all components</a>
-          </div>
-          <div class="col-lg-6 mb-lg-auto">
-            <div class="rounded shadow-lg overflow-hidden transform-perspective-right">
-              <div id="carousel_example" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li data-target="#carousel_example" data-slide-to="0" class="active"></li>
-                  <li data-target="#carousel_example" data-slide-to="1"></li>
-                </ol>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img class="img-fluid" src="./assets/img/theme/img-1-1200x1000.jpg" alt="First slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="img-fluid" src="./assets/img/theme/img-2-1200x1000.jpg" alt="Second slide">
-                  </div>
-                </div>
-                <a class="carousel-control-prev" href="#carousel_example" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carousel_example" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-      <!-- SVG separator -->
-      <!-- <div class="separator separator-bottom separator-skew">
-        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
-        </svg>
-      </div>
-    </section> -->
-    
     <section class="section">
         <div class="container">
             <div style="margin-bottom: 20px;" class="row justify-content-center">
                 <h1 class="mb-0">Tutorials</h1>
             </div>
             <div class="row">
-              <div class="col-md-6 mb-5 mb-md-0">
+              <div class="col-md-6 mb-5 mb-md-0 offset-md-3">
                 <div class="card card-lift--hover shadow border-0">
-                  <a href="#" data-toggle="modal" data-target="#getting-started-video" title="Getting Started with SpotSense">
+                  <a id="open-getting-started-video" href="#" data-toggle="modal" data-target="#getting-started-video" title="Getting Started with SpotSense">
                     <img src="./assets/img/misc/gettingstarted-screenshot.jpg" class="card-img">
                   </a>
                 </div>
                 <p style="padding-top: 10px;" class="text-center">Getting Started with SpotSense (4:55)</p>
               </div>
-              <div class="col-md-6 mb-5 mb-lg-0">
+              <!-- <div class="col-md-6 mb-5 mb-lg-0">
                 <div class="card card-lift--hover shadow border-0">
                   <a href="#" data-toggle="modal" data-target="#getting-started-video" title="Creating a Reminder App">
                     <img src="./assets/img/misc/gettingstarted-screenshot.jpg" class="card-img">
                   </a>
                 </div>
                 <p style="padding-top: 10px;" class="text-center">Creating a Reminder App (4:55)</p>
-              </div>
+              </div> -->
             </div>
 
             <!-- Modal -->
@@ -470,13 +414,24 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDele
   <!-- Argon JS -->
   <script src="./assets/js/argon.js?v=1.0.1"></script>
    
-  <!-- Intercom  -->
+  <!-- Segment -->
   <script>
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+    analytics.load("fAeTHy0QuTG6bcNSlw3aWUxsMB8S35IL");
+    analytics.page("Home");
+    }}();
+  </script>
+  <script src="./assets/js/analytics.js"></script>
+
+
+
+  <!-- Intercom  -->
+  <!-- <script>
     window.intercomSettings = {
       app_id: "dpnjcfwq"
     };
   </script>
-  <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/dpnjcfwq';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+  <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/dpnjcfwq';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script> -->
 </body>
 
 </html>
