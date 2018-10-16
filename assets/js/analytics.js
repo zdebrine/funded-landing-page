@@ -1,5 +1,3 @@
-// console.log("Hey bitch");
-
 $("#open-getting-started-video").click(function() {
     analytics.track("Opened getting started modal window");
 })
