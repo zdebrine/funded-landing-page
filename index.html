@@ -70,13 +70,13 @@
           </ul>
           <ul class="navbar-nav align-items-lg-center ml-lg-auto">
             <li class="nav-item">
-              <a id="github-icon" class="nav-link nav-link-icon" href="https://github.com/spotsenseio" target="_blank" data-toggle="tooltip" title="Star us on Github">
+              <a id="header-github-icon" class="nav-link nav-link-icon" href="https://github.com/spotsenseio" target="_blank" data-toggle="tooltip" title="Star us on Github">
                 <i class="fab fa-github"></i>
                 <span class="nav-link-inner--text d-lg-none">Github</span>
               </a>
             </li>
             <li class="nav-item d-none d-lg-block ml-lg-4">
-              <a id="dashboard-header" href="http://dashboard.spotsense.io" target="_blank" class="btn btn-neutral btn-icon">
+              <a id="header-dashboard-button" href="http://dashboard.spotsense.io" target="_blank" class="btn btn-neutral btn-icon">
                 <span class="btn-inner--icon">
                   <i class="fas fa-chart-line"></i>
                 </span>
@@ -107,10 +107,10 @@
                       The best part? It takes less than 5 minutes.
                   </p>
                   <div class="btn-wrapper mt-5">
-                      <a href="http://docs.spotsense.io" class="btn btn-lg btn-white btn-icon mb-3 mb-sm-0">
+                      <a id="documentation-button" href="http://docs.spotsense.io" class="btn btn-lg btn-white btn-icon mb-3 mb-sm-0">
                         <span class="btn-inner--text">Documentation</span>
                       </a>
-                      <a href="https://dashboard.spotsense.io" class="btn btn-lg btn-success mb-3 mb-sm-0" target="_blank">
+                      <a id="create-geofence-button" href="https://dashboard.spotsense.io" class="btn btn-lg btn-success mb-3 mb-sm-0" target="_blank">
                         <span class="btn-inner--text">Create a Geofence</span>
                       </a>
                     </div>
@@ -138,13 +138,13 @@
             <h1 class="mb-0">Get started with just a few lines of code</h1>
             <div class="row">
                 <div class="col-md-8 offset-md-2">
-                  <p class="description">Register an app in the <a href="http://dashboard.spotsense.io">Dashboard</a> to get a client ID and client secret, and then add the SDK to an existing app via <a href="https://cocoapods.org/pods/SpotSense">Cocoapods</a> or <a href="https://github.com/spotsenseio/sampleapp-ios">download our starter project</a>.</p>
+                  <p id="get-started-description" class="description">Register an app in the <a href="http://dashboard.spotsense.io">Dashboard</a> to get a client ID and client secret, and then add the SDK to an existing app via <a href="https://cocoapods.org/pods/SpotSense">Cocoapods</a> or <a href="https://github.com/spotsenseio/sampleapp-ios">download our starter project</a>.</p>
                 </div>
             </div>
         </div>
         <div class="row">
           <div class="col-md-10 offset-md-1">
-              <pre><code class="swift">import CoreLocation
+              <pre><code id="code-analytics" class="swift">import CoreLocation
 import SpotSense
 
 let spotsense = SpotSense(clientID: "client-id", clientSecret: "client-secret")
@@ -328,7 +328,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDele
             <div class="row">
               <div class="col-md-6 mb-5 mb-md-0 offset-md-3">
                 <div class="card card-lift--hover shadow border-0">
-                  <a id="open-getting-started-video" href="#" data-toggle="modal" data-target="#getting-started-video" title="Getting Started with SpotSense">
+                  <a id="getting-started-video" href="#" data-toggle="modal" data-target="#getting-started-video" title="Getting Started with SpotSense">
                     <img src="./assets/img/misc/gettingstarted-screenshot.jpg" class="card-img">
                   </a>
                 </div>
