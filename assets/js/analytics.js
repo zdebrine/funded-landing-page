@@ -18,16 +18,16 @@ $("#create-geofence-button").click(function() {
     console.log("Entered geofence button");
 })
 
+$("#get-started-description").click(function() {
+    analytics.track("Clicked a link in the get started description");
+})
+
 $("#code-analytics").hover(function() {
     analytics.track("Hovered over code area");
 })
 
 $("#code-analytics").click(function() {
     analytics.track("Clicked on code area");
-})
-
-$("#get-started-description").click(function() {
-    analytics.track("Clicked a link in the get started description");
 })
 
 $("#getting-started-video").click(function() {
