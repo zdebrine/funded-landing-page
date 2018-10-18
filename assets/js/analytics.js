@@ -30,17 +30,21 @@ $("#code-analytics").click(function() {
     analytics.track("Clicked on code area");
 })
 
+// Analytics Section
+
 $("#download-template-button").click(function() {
-    analytics.track("Clicked on download template button");
+    analytics.track("Click on 'download template' button");
 })
 
-$("#create-rule-button").click(function() {
-    analytics.track("Clicked on create rule button");
+$("#create-a-rule-button").click(function() {
+    analytics.track("Click on 'create a rule' button");
 })
 
-$("#test-button").click(function() {
-    analytics.track("Clicked on test button");
+$("#how-to-test-button").click(function() {
+    analytics.track("Click on 'download template' button");
 })
+
+// video analytics
 
 $("#getting-started-video").click(function() {
     analytics.track("Opened getting started modal window");

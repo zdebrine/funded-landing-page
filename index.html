@@ -32,7 +32,7 @@
   <header class="header-global">
     <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light">
       <div class="container">
-        <a class="navbar-brand mr-lg-5" href="./index.html">
+        <a class="navbar-brand mr-lg-2" href="./index.html">
           <img src="./assets/img/brand/spotsense-white-slim.png">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
@@ -103,7 +103,7 @@
                 <div class="col-lg-5 mb-5 mb-lg-0">
                   <h1 class="text-white font-weight-light">Build real world interactions that your users love </h1>
                   <p class="lead text-white mt-4">
-                      Learn where your users use your app, and use that data to interact with them at those locations.  <br><br>
+                      With our geofences + location analytics, your app turns the physical world into its playground<br><br>
                       The best part? It takes less than 5 minutes.
                   </p>
                   <div class="btn-wrapper mt-5">
@@ -114,37 +114,28 @@
                         <span class="btn-inner--text">Create a Geofence</span>
                       </a>
                     </div>
-                    <div class="mt-5">
-                      <small class="text-white font-weight-bold mb-0 mr-2">Made with ❤ in Phoenix</small>
-                    </div>
                 </div>
                 <div class="col-lg-6 mb-lg-auto">
-                  <img style="max-width: 100%" src="./assets/img/buildings/buildings.png">
+                  <img style="max-width: 100%" src="./assets/img/buildings/single-spotsense-building.png">
                 </div>
             </div>
         </div>
-        <!-- SVG separator -->
-        <!-- <div class="separator separator-bottom separator-skew zindex-100">
-          <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-            <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
-          </svg>
-        </div> -->
       </section>
     </div>
 
     <section class="section" id="get-started-analytics">
       <div class="container">
         <div style="margin-bottom: 50px;" class="row justify-content-center">
-            <h1 class="mb-0">Get started with just a few lines of code</h1>
+            <h1 class="mb-0">Geofencing + Location Analytics for Developers</h1>
             <div class="row">
                 <div class="col-md-8 offset-md-2">
-                  <p id="get-started-description" class="description">Register an app in the <a href="http://dashboard.spotsense.io">Dashboard</a> to get a client ID and client secret, and then add the SDK to an existing app via <a href="https://cocoapods.org/pods/SpotSense">Cocoapods</a> or <a href="https://github.com/spotsenseio/sampleapp-ios">download our starter project</a>.</p>
+                  
                 </div>
             </div>
         </div>
         <div class="row">
           <div class="col-md-10 offset-md-1">
-              <pre><code id="code-analytics" class="swift">import CoreLocation
+              <pre><code style="padding: 25px;" id="code-analytics" class="swift">import CoreLocation
 import SpotSense
 
 let spotsense = SpotSense(clientID: "client-id", clientSecret: "client-secret")
@@ -162,103 +153,28 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDele
     spotsense.startMonitoring() // this is where the magic happens
   }
 }</code></pre>
-          </div>
-
-          
+          </div>          
         </div>
-        <!-- <div class="row justify-content-between align-items-center"> -->
-            <div class="text-center mt-5">
-                <!-- <h4 class="display-4 mt-5">Available for: </h4> -->
-                <div class="row justify-content-center">
-                  <div class="col-lg-2 col-4">
-                    <div target="_blank" data-toggle="tooltip" data-original-title="iOS 10+">
-                      <img style="max-height: 50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1000px-Apple_logo_black.svg.png" class="img-fluid">
-                    </div>
-                  </div>
-                  <div class="col-lg-2 col-4">
-                    <div data-toggle="tooltip" data-original-title="Android (Coming soon)">
-                      <img style="max-height: 50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/2000px-Android_robot.svg.png" class="img-fluid opacity-3">
-                    </div>
-                  </div>
-                  <div class="col-lg-2 col-4">
-                    <div data-toggle="tooltip" data-original-title="React Native (Coming Soon)">
-                      <img style="max-height: 50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" class="img-fluid opacity-3">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            <!-- </div> -->
       </div>
     </section>
 
-    <section class="section bg-secondary">
-      <div class="container">
-        <div class="row justify-content-center">
-          <h1 class="mb-0">Monitor Places + Understand Your Users</h1>
-        </div>
-        
-        <div class="row" style="margin-bottom: 34px;">
-            <div class="col-md-8 offset-md-2">
-              <p class="description">Monitor places to see when your users enter, exit, dwell, and return to the boundaries of your geofence</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4">
-              <img style="max-width: 100%" src="./assets/img/buildings/geobuilding.png" alt="single building with geofence surrounding it">
-            </div>
-            <div class="col-md-8">
-                <h5 style="padding-left: 16px"><strong>Place: </strong>Bill's BBQ</h5>
-                <table class="table" style="margin-top: 10px;">
-                    <thead>
-                      <tr>
-                        <th scope="col">User</th>
-                        <th scope="col">Enter</th>
-                        <th scope="col">Exit</th>
-                        <th scope="col">Dwell Length</th>
-                        <th scope="col">Number of Visits</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">Maroon Koala</th>
-                        <td>11:21am</td>
-                        <td>2:03pm</td>
-                        <td>2 hr 42 min</td>
-                        <td>8</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Purple Panda</th>
-                        <td>1:03pm</td>
-                        <td>1:30pm</td>
-                        <td>27 min</td>
-                        <td>3</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Green Octopus</th>
-                        <td>1:11pm</td>
-                        <td>1:14pm</td>
-                        <td>3 min</td>
-                        <td>1</td>
-                      </tr>
-                      
-                    </tbody>
-                  </table>
-                
-            </div>
-          </div>
-      </div>
-    </section>
+    
 
 
     <section class="section">
       <div class="container">
-        <div style="margin-bottom: 20px;" class="row justify-content-center">
-            <h1 class="mb-0">Turn analytics into relevant actions for your users</h1>
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                  <p class="description">Choose areas to monitor for the presence of your users and gain insights to how they move throughout these locations, all in a secure way</p>
-                </div>
+        <h1 class="display-1 text-center">Geofences</h1>
+        <div class="row justify-content-center">
+          <h2 class="mb-0">Interact with your users' physical world</h1>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-2 offset-md-5">
+              <p>Beta is <a href="">open now</a></p>          
+            </div>
+          </div>
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+              <p class="description">Choose areas to monitor for the presence of your users and gain insights to how they move throughout these locations, all in a secure way</p>
             </div>
         </div>
 
@@ -276,7 +192,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDele
                     <div>
 
                     </div>
-                    <a id="download-template-button" href="#" class="btn btn-success mt-4">Download Template</a>
+                    <a id="download-template-button" target="_blank" href="https://github.com/spotsenseio/sampleapp-ios" class="btn btn-success mt-4">Download Template</a>
                   </div>
                 </div>
               </div>
@@ -293,7 +209,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDele
                     <div>
 
                     </div>
-                    <a id="create-rule-button" href="#" class="btn btn-success mt-4">Create a Rule</a>
+                    <a id="create-a-rule-button" target="_blank" href="http://dashboard.spotsense.io" class="btn btn-success mt-4">Create a Rule</a>
                   </div>
                 </div>
               </div>
@@ -308,7 +224,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDele
                     <p class="description mt-3">Launch your geofence to your app without resubmitting it to the App Store</p>
                     <div>
                     </div>
-                    <a id="test-button" href="#" class="btn btn-success mt-4">Test</a>
+                    <a id="how-to-test-button" href="http://docs.spotsense.io" class="btn btn-success mt-4">How to test</a>
                   </div>
                 </div>
               </div>
@@ -322,8 +238,138 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDele
     
     <section class="section">
         <div class="container">
+          <h1 class="display-1 text-center">Analytics <p>Coming Soon</p></h1>
+          <div class="row justify-content-center">
+            <h2 class="mb-0">Monitor Places + Understand Your Users</h2>
+          </div>
+          
+          
+          <div class="row" style="margin-bottom: 34px;">
+              <div class="col-md-8 offset-md-2">
+                <p class="description">Monitor places to see when your users enter, exit, dwell, and return to the boundaries of your geofence</p>
+              </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4">
+                <canvas id="locationPermissions"></canvas>
+              </div>
+            <div class="col-md-8">
+              <canvas id="getTimeSeries_7d"></canvas>
+            </div>
+          </div>
+
+          
+          <!-- <div class="row">
+              <div class="col-md-4">
+                <img style="max-width: 100%" src="./assets/img/buildings/geobuilding.png" alt="single building with geofence surrounding it">
+              </div>
+              <div class="col-md-8">
+                  <h5 style="padding-left: 16px"><strong>Place: </strong>Bill's BBQ</h5>
+                  <table class="table" style="margin-top: 10px;">
+                      <thead>
+                        <tr>
+                          <th scope="col">User</th>
+                          <th scope="col">Enter</th>
+                          <th scope="col">Exit</th>
+                          <th scope="col">Dwell Length</th>
+                          <th scope="col">Number of Visits</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">Maroon Koala</th>
+                          <td>11:21am</td>
+                          <td>2:03pm</td>
+                          <td>2 hr 42 min</td>
+                          <td>8</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Purple Panda</th>
+                          <td>1:03pm</td>
+                          <td>1:30pm</td>
+                          <td>27 min</td>
+                          <td>3</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Green Octopus</th>
+                          <td>1:11pm</td>
+                          <td>1:14pm</td>
+                          <td>3 min</td>
+                          <td>1</td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  
+              </div>
+            </div> -->
+        </div>
+      </section>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="display-1 text-center">Get Started</h1>
+            <div class="row justify-content-center">
+                <h2 class="mb-5">Add a geofence in less than 5 minutes</h2>
+              </div>
+            
+            <div class="row">
+              <div class="col-md-8 offset-md-2">
+                  <div class="d-flex px-3">
+                    <div>
+                        <div class="icon icon-shape bg-primary rounded-circle text-white">
+                        1
+                        </div>
+                    </div>
+                    <div class="pl-4">
+                        <h5 class="title text-primary">Get credentials</h5>
+                        <p>
+                          Create a new app in the <strong><a href="http://dashboard.spotsense.io">SpotSense Dashboard</a></strong>, and get a client-id and secret to use with the SDK
+                        </p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="d-flex px-3">
+                      <div>
+                          <div class="icon icon-shape bg-primary rounded-circle text-white">
+                          2
+                          </div>
+                      </div>
+                      <div class="pl-4">
+                          <h5 class="title text-primary">Add the SDK (iOS)</h5>
+                          <p>
+                            Download the SpotSense SDK via <strong><a href="https://cocoapods.org/pods/SpotSense">Cocoapods</a></strong>, or <strong><a href="https://github.com/spotsenseio/sampleapp-ios">download a sample project for iOS</a></strong>
+                          </p>
+                      </div>
+                    </div>
+                </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-md-8 offset-md-2">
+                      <div class="d-flex px-3">
+                        <div>
+                            <div class="icon icon-shape bg-primary rounded-circle text-white">
+                            3
+                            </div>
+                        </div>
+                        <div class="pl-4">
+                            <h5 class="title text-primary">Create a rule + start collecting analytics</h5>
+                            <p>Create a rule to monitor a place antywhere in the world! You can attach an action, e.g. a notification, to each place or just passively collect data</p>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+            
             <div style="margin-bottom: 20px;" class="row justify-content-center">
-                <h1 class="mb-0">Tutorials</h1>
+                <!-- <h1 class="mb-0">Tutorials</h1> -->
+                <h2 class="mt-5 mb-2">Tutorials</h2>
+
             </div>
             <div class="row">
               <div class="col-md-6 mb-5 mb-md-0 offset-md-3">
@@ -375,13 +421,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDele
     <div class="container">
       <hr>
       <div class="row align-items-center justify-content-md-between">
-        <div class="col-md-6">
+        <div class="col-md-4">
           <div class="copyright">
             &copy; 2018
             <a href="https://spotsense.io" target="_blank">SpotSense (Sonora Data, LLC)</a>.
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-3 text-center">
+          <small class="font-weight-bold">Made with ❤ in Phoenix</small>
+        </div>
+        <div class="col-md-5">
           <ul class="nav nav-footer justify-content-end">
             <li class="nav-item">
               <!-- TODO: make this a modal window  -->
@@ -413,7 +462,55 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDele
   <script src="./assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
   <!-- Argon JS -->
   <script src="./assets/js/argon.js?v=1.0.1"></script>
-   
+  
+  <!-- Chart JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script src="./assets/js/generatedata.js"></script>
+  <script>
+    // Draw the pie chart
+    var arr = getLocationPermissionData();
+    var ctx = document.getElementById("locationPermissions");
+    var myLineChart = new Chart(ctx, {
+          type: 'pie',
+        data: {
+          labels: arr[0],
+          datasets: [{
+            label: "Status",
+            backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f"],
+            data: arr[1]
+          }]
+        },
+        options: {
+          title: {
+            display: true,
+            text: "All Users: Location Enabled?"
+          }
+        }
+    });
+    </script>
+    <script>
+      var arr = getTimeSeries_7d();
+      var ctx = document.getElementById("getTimeSeries_7d");
+      var myLineChart = new Chart(ctx, {
+            type: 'line',
+        data: {
+          labels: arr[0],
+          datasets: [{ 
+              data: arr[1],
+              label: "Visitors",
+              borderColor: "#2dce89",
+              fill: false
+            }
+          ]
+        },
+        options: {
+          title: {
+            display: true,
+            text: "Number of Visitors This Week"
+          }
+        }
+      });
+    </script>
   <!-- Segment -->
   <script>
     !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
