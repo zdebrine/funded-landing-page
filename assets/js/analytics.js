@@ -30,6 +30,22 @@ $("#code-analytics").click(function() {
     analytics.track("Clicked on code area");
 })
 
+// Analytics Section
+
+$("#download-template-button").click(function() {
+    analytics.track("Click on 'download template' button");
+})
+
+$("#create-a-rule-button").click(function() {
+    analytics.track("Click on 'create a rule' button");
+})
+
+$("#how-to-test-button").click(function() {
+    analytics.track("Click on 'download template' button");
+})
+
+// video analytics
+
 $("#getting-started-video").click(function() {
     analytics.track("Opened getting started modal window");
 })
@@ -59,3 +75,4 @@ $("#pricing-enterprise-button").click(function() {
 $("#pricing-insight-cards").hover(function() {
     analytics.track("Hovered over pricing insight cards");
 })
+
