@@ -95,7 +95,7 @@ function getLocationPermissionData() {
         allow = Math.floor(Math.random() * 100);
         whenInUse = Math.abs(allow - Math.floor(Math.random() * 100));
         never = Math.abs(100 - allow - whenInUse);
-    } while (allow + whenInUse + never !== 100);
+    } while (allow + whenInUse + never !== 100 && allow < 1 && whenInUse < 1 && never < 1);
     
     response[1] = [allow, whenInUse, never];
 
