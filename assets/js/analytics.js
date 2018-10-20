@@ -1,4 +1,4 @@
-// Landing page analytics
+// header analytics
 
 $("#header-github-icon").click(function() {
     analytics.track("Clicked on GitHub icon");
@@ -8,14 +8,14 @@ $("#header-dashboard-button").click(function() {
     analytics.track("Clicked on dashboard in header");
 })
 
+// Landing page analytics
+
 $("#documentation-button").click(function() {
     analytics.track("Clicked on documentation button");
-    console.log("Entered doc button");
 })
 
 $("#create-geofence-button").click(function() {
     analytics.track("Clicked on create geofence button");
-    console.log("Entered geofence button");
 })
 
 $("#get-started-description").click(function() {
@@ -76,3 +76,20 @@ $("#pricing-insight-cards").hover(function() {
     analytics.track("Hovered over pricing insight cards");
 })
 
+// footer analytics
+
+$("#footer-careers").click(function() {
+    analytics.track("Clicked on footer careers button");
+})
+
+$("#footer-about").click(function() {
+    analytics.track("Clicked on footer about button");
+})
+
+$("#footer-blog").click(function() {
+    analytics.track("Clicked on footer blog button");
+})
+
+$("#footer-privacypolicy").click(function() {
+    analytics.track("Clicked on footer privacy policy button");
+})
