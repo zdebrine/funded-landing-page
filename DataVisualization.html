@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <script src = "generatedata.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+</head> 
+<body>
+<div class="chart-container" style="position: relative; height:auto; width:90%">
+    <canvas id="getTimeSeries_24h"></canvas>
+</div>
+<div class="chart-container" style="position: relative; height:auto; width:90%">
+    <canvas id="getTimeSeries_7d"></canvas>
+</div>
+<div class="chart-container" style="position: relative; height:auto; width:90%">
+    <canvas id="getTimeSeries_1m"></canvas>
+</div>
+<div class="chart-container" style="position: relative; height:auto; width:90%">
+    <canvas id="getTimeSeries_1y"></canvas>
+</div>
+<div class="chart-container" style="position: relative; height:auto; width:50%">
+    <canvas id="locationPermissions"></canvas>
+</div>
+<div class="chart-container" style="position: relative; height:auto; width:50%">
+    <canvas id="notificationPermissions"></canvas>
+</div>
+<div class="chart-container" style="position: relative; height:auto; width:50%;">
+    <canvas id="openRateLabels"></canvas>
+</div>
+<script>
+var arr = getTimeSeries_7d();
+var ctx = document.getElementById("getTimeSeries_7d");
+var myLineChart = new Chart(ctx, {
+     type: 'line',
+  data: {
+    labels: arr[0],
+    datasets: [{ 
+        data: arr[1],
+        label: "getTimeSeries_7d",
+        borderColor: "#3e95cd",
+        fill: false
+      }
+    ]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "getTimeSeries_7d"
+    }
+  }
+});
+</script>
+<script>
+var arr = getTimeSeries_24h();
+var ctx = document.getElementById("getTimeSeries_24h");
+var myLineChart = new Chart(ctx, {
+     type: 'line',
+  data: {
+    labels: arr[0],
+    datasets: [{ 
+        data: arr[1],
+        label: "getTimeSeries_24h",
+        borderColor: "red",
+        fill: false
+      }
+    ]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "getTimeSeries_24h"
+    }
+  }
+});
+</script>
+<script>
+var arr = getTimeSeries_1m();
+var ctx = document.getElementById("getTimeSeries_1m");
+var myLineChart = new Chart(ctx, {
+     type: 'line',
+  data: {
+    labels: arr[0],
+    datasets: [{ 
+        data: arr[1],
+        label: "getTimeSeries_1m",
+        borderColor: "green",
+        fill: false
+      }
+    ]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "getTimeSeries_1m"
+    }
+  }
+});
+</script>
+<script>
+var colorArr = ["#008000", "#F08080", "#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850", "#FFA07A", "#87CEFA","#B0C4DE","#3CB371","#808000"];
+var arr = getTimeSeries_1y();
+var ctx = document.getElementById("getTimeSeries_1y");
+var myLineChart = new Chart(ctx, {
+     type: 'line',
+  data: {
+    labels: arr[0],
+    datasets: [{ 
+        data: arr[1],
+        label: "getTimeSeries_1y",
+        borderColor: "orange",
+        fill: false
+      }
+    ]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "getTimeSeries_1y"
+    }
+  }
+});
+</script>
+<script>
+  var arr = getLocationPermissionData();
+var ctx = document.getElementById("locationPermissions");
+var myLineChart = new Chart(ctx, {
+     type: 'pie',
+    data: {
+      labels: arr[0],
+      datasets: [{
+        label: "Population (millions)",
+        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f"],
+        data: arr[1]
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: "Distribution of level of access we have to users' locations"
+      }
+    }
+});
+</script>
+<script>
+  var arr = getNotificationPermissionData();
+var ctx = document.getElementById("notificationPermissions");
+var myLineChart = new Chart(ctx, {
+     type: 'pie',
+    data: {
+      labels: arr[0],
+      datasets: [{
+        label: "Population (millions)",
+        backgroundColor: ["#e8c3b9","#c45850"],
+        data: arr[1]
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: "Percentage of people who have enabled notifications"
+      }
+    }
+});
+</script>
+<script>
+  var arr = getOpenRatePermission();
+var ctx = document.getElementById("openRateLabels");
+var myLineChart = new Chart(ctx, {
+     type: 'pie',
+    data: {
+      labels: arr[0],
+      datasets: [{
+        label: "Population (millions)",
+        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+        data: arr[1]
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: "Open Rate"
+      }
+    }
+});
+</script>
+</body>
+</html>
