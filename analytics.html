@@ -24,6 +24,10 @@
         <link rel="stylesheet" href="./assets/js/highlight/styles/obsidian.css">
         <script src="./assets/js/highlight/highlight.pack.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+        <script src="./assets/js/generatedata.js"></script>
+        <script src="./assets/js/charts.html"></script>
       
       </head>
 
@@ -139,7 +143,7 @@
                             <button id="no-visits-1m-upvote" type="button" class="btn btn-secondary">
                                 <i class="far fa-thumbs-up"></i>
                             </button>
-                            <button type="no-visits-1m-downvote" class="btn btn-secondary">
+                            <button id="no-visits-1m-downvote" type ="button" class="btn btn-secondary">
                                 <i class="far fa-thumbs-down"></i>
                             </button>
                         </div>
@@ -163,9 +167,25 @@
               <div class="col-lg-12">
                 <div class="card card-lift--hover shadow border-0">
                   <div class="card-body py-5">
-                    <h3>Number of Visits -  Across a day</h3>
-                    <!-- Add map Like this: -->
-                    <!-- We can use bootstrap columns to make it a good size -->
+                    <!-- Header -->
+                    <div class="row">
+                      <div class="col-md-6">
+                        <h3>Number of Visits</h3>
+                        <p class="description">Amount of visitors over a 1 day period</p>
+                      </div>
+                      <div class="col-md-6">
+                        <!-- Voting Buttons -->
+                        <div style="float: right" class="btn-group btn-group-lg" role="group" aria-label="...">
+                            <button id="no-visits-24h-upvote" type="button" class="btn btn-secondary">
+                                <i class="far fa-thumbs-up"></i>
+                            </button>
+                            <button id ="no-visits-24h-downvote" type ="button" class="btn btn-secondary">
+                                <i class="far fa-thumbs-down"></i>
+                            </button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Body --> 
                     <div class="col-md-6 offset-md-3"> <!-- Width = 6, offset 3 from the left -->
                       <canvas id="getTimeSeries_24h"></canvas>
                     </div>
@@ -184,9 +204,25 @@
               <div class="col-lg-12">
                 <div class="card card-lift--hover shadow border-0">
                   <div class="card-body py-5">
-                    <h3>Number of Visits - Across 7 days</h3>
-                    <!-- Add map Like this: -->
-                    <!-- We can use bootstrap columns to make it a good size -->
+                    <!-- Header -->
+                    <div class="row">
+                      <div class="col-md-6">
+                        <h3>Number of Visits</h3>
+                        <p class="description">Amount of visitors over a 1 week period</p>
+                      </div>
+                      <div class="col-md-6">
+                        <!-- Voting Buttons -->
+                        <div style="float: right" class="btn-group btn-group-lg" role="group" aria-label="...">
+                            <button id="no-visits-7d-upvote" type="button" class="btn btn-secondary">
+                                <i class="far fa-thumbs-up"></i>
+                            </button>
+                            <button id="no-visits-7d-downvote" type ="button" class="btn btn-secondary">
+                                <i class="far fa-thumbs-down"></i>
+                            </button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Body --> 
                     <div class="col-md-6 offset-md-3"> <!-- Width = 6, offset 3 from the left -->
                       <canvas id="getTimeSeries_7d"></canvas>
                     </div>
@@ -206,9 +242,25 @@
               <div class="col-lg-12">
                 <div class="card card-lift--hover shadow border-0">
                   <div class="card-body py-5">
-                    <h3>Number of Visits - Across 12 months</h3>
-                    <!-- Add map Like this: -->
-                    <!-- We can use bootstrap columns to make it a good size -->
+                    <!-- Header -->
+                    <div class="row">
+                      <div class="col-md-6">
+                        <h3>Number of Visits</h3>
+                        <p class="description">Amount of visitors over a 1 year period</p>
+                      </div>
+                      <div class="col-md-6">
+                        <!-- Voting Buttons -->
+                        <div style="float: right" class="btn-group btn-group-lg" role="group" aria-label="...">
+                            <button id="no-visits-1y-upvote" type="button" class="btn btn-secondary">
+                                <i class="far fa-thumbs-up"></i>
+                            </button>
+                            <button id ="no-visits-1y-downvote" type ="button" class="btn btn-secondary">
+                                <i class="far fa-thumbs-down"></i>
+                            </button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Body --> 
                     <div class="col-md-6 offset-md-3"> <!-- Width = 6, offset 3 from the left -->
                       <canvas id="getTimeSeries_1y"></canvas>
                     </div>
@@ -227,9 +279,25 @@
               <div class="col-lg-12">
                 <div class="card card-lift--hover shadow border-0">
                   <div class="card-body py-5">
-                    <h3>Location Permissions</h3>
-                    <!-- Add map Like this: -->
-                    <!-- We can use bootstrap columns to make it a good size -->
+                    <!-- Header -->
+                    <div class="row">
+                      <div class="col-md-6">
+                        <h3>Location Permission</h3>
+                        <p class="description">Distribution of level of access we have to users' locations</p>
+                      </div>
+                      <div class="col-md-6">
+                        <!-- Voting Buttons -->
+                        <div style="float: right" class="btn-group btn-group-lg" role="group" aria-label="...">
+                            <button id="locationPermission-upvote" type="button" class="btn btn-secondary">
+                                <i class="far fa-thumbs-up"></i>
+                            </button>
+                            <button id="locationPermission-downvote" type ="button" class="btn btn-secondary">
+                                <i class="far fa-thumbs-down"></i>
+                            </button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Body --> 
                     <div class="col-md-6 offset-md-3"> <!-- Width = 6, offset 3 from the left -->
                       <canvas id="locationPermissions"></canvas>
                     </div>
@@ -248,9 +316,25 @@
               <div class="col-lg-12">
                 <div class="card card-lift--hover shadow border-0">
                   <div class="card-body py-5">
-                    <h3>Notification Permissions</h3>
-                    <!-- Add map Like this: -->
-                    <!-- We can use bootstrap columns to make it a good size -->
+                    <!-- Header -->
+                    <div class="row">
+                      <div class="col-md-6">
+                        <h3>Notification Permission</h3>
+                        <p class="description">Distribution of people who have enabled notifications</p>
+                      </div>
+                      <div class="col-md-6">
+                        <!-- Voting Buttons -->
+                        <div style="float: right" class="btn-group btn-group-lg" role="group" aria-label="...">
+                            <button id="notificationPermission-upvote" type="button" class="btn btn-secondary">
+                                <i class="far fa-thumbs-up"></i>
+                            </button>
+                            <button id="notificationPermission-downvote" type ="button" class="btn btn-secondary">
+                                <i class="far fa-thumbs-down"></i>
+                            </button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Body --> 
                     <div class="col-md-6 offset-md-3"> <!-- Width = 6, offset 3 from the left -->
                       <canvas id="notificationPermissions"></canvas>
                     </div>
@@ -269,9 +353,25 @@
               <div class="col-lg-12">
                 <div class="card card-lift--hover shadow border-0">
                   <div class="card-body py-5">
-                    <h3>Open Rates</h3>
-                    <!-- Add map Like this: -->
-                    <!-- We can use bootstrap columns to make it a good size -->
+                    <!-- Header -->
+                    <div class="row">
+                      <div class="col-md-6">
+                        <h3>Open Rates</h3>
+                        <p class="description">Distribution of people who have opened the notifications</p>
+                      </div>
+                      <div class="col-md-6">
+                        <!-- Voting Buttons -->
+                        <div style="float: right" class="btn-group btn-group-lg" role="group" aria-label="...">
+                            <button id="openRate-upvote" type="button" class="btn btn-secondary">
+                                <i class="far fa-thumbs-up"></i>
+                            </button>
+                            <button id="openRate-downvote" type ="button" class="btn btn-secondary">
+                                <i class="far fa-thumbs-down"></i>
+                            </button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Body --> 
                     <div class="col-md-6 offset-md-3"> <!-- Width = 6, offset 3 from the left -->
                       <canvas id="openRateLabels"></canvas>
                     </div>
@@ -282,9 +382,6 @@
           </div>
         </div>
         <!-- End new card -->
-
-        <!-- Add more maps below by copying and pasting the card code above and adding a new canvas to the card body -->
-        <!-- Add as many as you need! -->
       </div>
 
 
@@ -339,8 +436,6 @@
     <script src="./assets/js/argon.js?v=1.0.1"></script>
      
     <!-- Chart JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-    <script src="./assets/js/generatedata.js"></script>
     <script>
       var arr = getTimeSeries_7d();
       var ctx = document.getElementById("getTimeSeries_7d");
@@ -350,7 +445,7 @@
           labels: arr[0],
           datasets: [{ 
             data: arr[1],
-            label: "getTimeSeries_7d",
+            label: "Number of Visitors",
             backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850", "#3e95cd", "#8e5ea2"],
             fill: false
           }]
@@ -358,7 +453,21 @@
         options: {
           title: {
             display: true,
-            //text: "getTimeSeries_7d"
+            text: "Visitors to Your Place"
+          }, 
+          scales: {
+            yAxes: [{
+              scaleLabel: {
+                display: true,
+                labelString: 'Day'
+              }
+            }],
+            xAxes: [{
+              scaleLabel: {
+                display: true,
+                labelString: 'Number of Visits'
+              }
+            }]
           }
         }
       });
@@ -372,7 +481,7 @@
           labels: arr[0],
           datasets: [{ 
             data: arr[1],
-            label: "getTimeSeries_24h",
+            label: "Number of Visits",
             borderColor: "#3e95cd",
             fill: false
             }]
@@ -380,7 +489,8 @@
         options: {
           title: {
             display: true,
-            //text: "getTimeSeries_24h"
+            text: "Visitors to Your Place",
+            //labelString: 'time'
           }
         }
       });
@@ -414,7 +524,7 @@
             xAxes: [{
               scaleLabel: {
                 display: true,
-                labelString: 'Time (hour)'
+                labelString: 'Time (date)'
               }
             }]
           }
@@ -431,7 +541,7 @@
           labels: arr[0],
           datasets: [{ 
               data: arr[1],
-              label: "getTimeSeries_1y",
+              label: "Number of Visitors",
               borderColor: "#3e95cd",
               fill: false
             }
@@ -439,7 +549,21 @@
         options: {
           title: {
             display: true,
-            //text: "getTimeSeries_1y"
+            text: "Visitors to Your Place"
+          }, 
+          scales: {
+            yAxes: [{
+              scaleLabel: {
+                display: true,
+                labelString: 'Number of Visits'
+              }
+            }],
+            xAxes: [{
+              scaleLabel: {
+                display: true,
+                labelString: 'Month'
+              }
+            }]
           }
         }
       });
@@ -448,7 +572,7 @@
       var arr = getLocationPermissionData();
       var ctx = document.getElementById("locationPermissions");
       var myLineChart = new Chart(ctx, {
-        type: 'polarArea',
+        type: 'doughnut',
         data: {
           labels: arr[0],
           datasets: [{
@@ -460,7 +584,7 @@
         options: {
           title: {
             display: true,
-            //text: "Distribution of level of access we have to users' locations"
+            text: "Distribution of access given by the users to use their locations"
           }
         }
       });
@@ -469,7 +593,7 @@
       var arr = getNotificationPermissionData();
       var ctx = document.getElementById("notificationPermissions");
       var myLineChart = new Chart(ctx, {
-        type: 'doughnut',
+        type: 'polarArea',
         data: {
           labels: arr[0],
           datasets: [{
@@ -481,7 +605,7 @@
         options: {
           title: {
             display: true,
-            //text: "Percentage of people who have enabled notifications"
+            text: "Distribution of access given by the users to send them notifications"
           }
         }
     });
@@ -502,11 +626,13 @@
         options: {
           title: {
             display: true,
-            //text: "Open Rate"
+            text: "Distribution of open rate"
           }
         }
     });
     </script>
+
+
       
     <!-- Segment JS -->
     <script>
