@@ -124,6 +124,6 @@ function getOpenRatePermission() {
     return response;
 }
 
-console.log(getLocationPermissionData());
+// console.log(getLocationPermissionData());
 // console.log(getNotificationPermissionData());
 // console.log(getOpenRatePermission());
