@@ -69,6 +69,7 @@ $("#pricing-startup-button").click(function() {
 })
 
 $("#pricing-enterprise-button").click(function() {
+    Intercom('showNewMessage'); // open intercom messenger to a new message
     analytics.track("Clicked on enterprise buy button");
 })
 
