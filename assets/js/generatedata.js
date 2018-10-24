@@ -221,4 +221,3 @@ function getNumberOfVisits() {
     
     return num;
 }
-
