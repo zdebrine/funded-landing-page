@@ -94,3 +94,24 @@ $("#footer-blog").click(function() {
 $("#footer-privacypolicy").click(function() {
     analytics.track("Clicked on footer privacy policy button");
 })
+
+// Voting for Analytic Graphs
+
+// Number of visits: 1 month
+var no_visits_1m_voted = false;
+$("#no-visits-1m-upvote").click(function() {
+    if (!no_visits_1m_voted) {
+        no_visits_1m_voted = true;
+        analytics.track("Upvoted number of visits - 1 month"); // log in mixpanel
+        $("#no-visits-1m-upvote").addClass('active')
+    }
+})
+
+$("#no-visits-1m-downvote").click(function() {
+    // console.log("click");
+    if (!no_visits_1m_voted) {
+        no_visits_1m_voted = true;
+        analytics.track("Downvoted number of visits - 1 month"); // log in mixpanel
+        $("#no-visits-1m-downvote").addClass('active')
+    }
+})
