@@ -13,6 +13,11 @@ const labels_7d = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Satu
 const labels_1m =  ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"];
 const labels_1y = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dev"];
 
+
+// sample user words
+const firstNames = ["White", "Yellow", "Orange", "Red", "Pink", "Purple", "Blue", "Green", "Brown", "Gray", "Black", "Maroon", "Gold", "Fuschia"];
+const lastNames = ["Rhinoceros", "Frog", "Terrier", "Angelfish", "Cat", "Chinchilla", "Whale", "Dolphin", "Aardvark", "Bumble Bee", "Zonkey", "Liger", "Horse", "Coyote"];
+
 // Data Generators
 
 function getTimeSeries_24h() {
@@ -123,3 +128,97 @@ function getOpenRatePermission() {
 
     return response;
 }
+
+/* 
+    
+    Random Visit Objects:
+    * Name 
+    * Enter Time
+    * Exit Time
+    * Number of Visits
+*/
+
+function getVisits(numberOfVisits) {
+    var arr = [];
+    
+    for (var i = 0; i != numberOfVisits; i++) {
+        arr.push(getVisit());
+    }
+
+    return arr;
+}
+
+
+function getVisit() {
+    var response = {};
+
+    response.name = getRandomName();
+    
+    let visit = getRandomVisit();
+    response.start = visit.start;
+    response.end = visit.end;
+    response.visitLength = visit.visitLength;
+    
+    response.numberOfVisits = getNumberOfVisits();
+
+    return response;
+}
+
+function getRandomVisit() {
+    let startHour = Math.floor(Math.random() * 12);
+    let startMinutes = Math.floor(Math.random() * 60);
+
+    var startTimeString = "";
+
+    // get offset values
+    let offsetHour = Math.floor(Math.random() * 6);
+    let offsetMinutes = Math.floor(Math.random() * 60);
+
+
+
+    let endHour = (startHour + offsetHour) % 12;
+    let endMinutes = (startMinutes + offsetMinutes) % 59;
+
+
+    let res = {
+        start: formatTimeString(startHour, startMinutes),
+        visitLength: `${offsetHour}h ${offsetMinutes}m`,
+        end: formatTimeString(endHour, endMinutes)
+    }
+
+    return res;
+}
+
+function formatTimeString(h, m) {
+    // var h_string, m_string;
+
+    if (h === 0) {
+        h = '12';
+    }
+
+    if (m < 10) {
+        m = '0' + m
+    }
+
+    return `${h}:${m}`
+
+}
+
+function getRandomName() {
+    // randomly get name from first name
+    let firstName = firstNames[Math.floor(Math.random()*firstNames.length)];
+    let lastName = lastNames[Math.floor(Math.random()*lastNames.length)];
+
+    return `${firstName} ${lastName}`;
+}
+
+function getNumberOfVisits() {
+    var num = Math.floor(Math.random() * 5);
+
+    while (num == 0) {
+        num = Math.floor(Math.random() * 5);
+    }
+    
+    return num;
+}
+
