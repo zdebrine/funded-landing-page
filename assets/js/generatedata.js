@@ -129,10 +129,6 @@ function getOpenRatePermission() {
     return response;
 }
 
-// console.log(getLocationPermissionData());
-// console.log(getNotificationPermissionData());
-// console.log(getOpenRatePermission());
-
 /* 
     
     Random Visit Objects:
@@ -225,7 +221,3 @@ function getNumberOfVisits() {
     
     return num;
 }
-
-// console.log(getVisit());
-// console.log(getVisits(10));
-// getRandomVisit();

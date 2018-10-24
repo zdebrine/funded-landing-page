@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <script src="./assets/js/generatedata.js"></script>
+    </head>
+    <style type="text/css">
+      table tr:nth-child(even) {
+          background-color: #eee;
+      }
+      table tr:nth-child(odd) {
+          background-color: #fff;
+      }
+      table th {
+          background-color: #3e95cd;
+      }
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th, td {
+          padding: 15px;
+      }
+    </style>
+    <body>
+      <h2> User Data </h2>
+      <table id="userData" border="1">
+        <thead>
+          <tr>
+            <th align="left">Name</th>
+            <th align="left">Start</th>
+            <th align="left">End</th>
+            <th align="left">Visit Length</th>
+            <th align="left">Number Of Visits</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <script type="text/javascript">
+
+        var userData = getVisits(10);
+
+        function addDataToTbody(nl, data) { // nl -> NodeList, data -> array with objects
+          data.forEach((d, i) => {
+            var tr = nl.insertRow(i);
+            Object.keys(d).forEach((k, j) => { // Keys from object represent th.innerHTML
+              var cell = tr.insertCell(j);
+              cell.innerHTML = d[k]; // Assign object values to cells   
+            });
+            nl.appendChild(tr);
+          })
+        }
+        var userDataTbody = document.querySelector("#userData tbody");
+        addDataToTbody(userDataTbody, userData);
+      </script>
+    </body>
+</html>
