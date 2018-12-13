@@ -19,12 +19,14 @@
 
   <!-- Argon CSS -->
   <link type="text/css" href="./assets/css/argon.css?v=1.0.1" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/prism.css">
         
   <!-- Code Syntax Highlighting -->
   <link rel="stylesheet" href="./assets/js/highlight/styles/obsidian.css">
   <script src="./assets/js/highlight/highlight.pack.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 
+  
 </head>
 
 <body>
@@ -136,6 +138,7 @@
         </div>
         <div class="row">
           <div class="col-md-10 offset-md-1">
+            <!-- <div id ="code-container"></div> -->
               <pre><code style="padding: 25px;" id="code-analytics" class="swift">import CoreLocation
 import SpotSense
 
@@ -515,7 +518,47 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDele
         }
       });
     </script>
+
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glorious/demo/dist/gdemo.min.css"> 
+<script src="https://cdn.jsdelivr.net/npm/@glorious/demo/dist/gdemo.min.js"></script>
+<script src="./assets/js/prism.js"></script>
+<script>
+    const demo = new GDemo('#code-container');
+
+    const code = `
+import CoreLocation
+import SpotSense
+
+let spotsense = SpotSense(clientID: "client-id", clientSecret: "client-secret")
+
+class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDelegate {
+  let locationManager : CLLocationManager = CLLocationManager()
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    // get location permissions
+    locationManager.requestAlwaysAuthorization()
+    locationManager.delegate = self
+    spotsense.delegate = self
+
+    spotsense.startMonitoring() // this is where the magic happens
+  }
+
+};`
+
+    const highlightedCode = Prism.highlight(
+      code,
+      Prism.languages.swift,
+      'swift'
+    );
+
+    demo
+      .openApp('editor', {minHeight: '350px', windowTitle: 'ViewController.swift'})
+      .write(highlightedCode)
+      .end();
+</script> -->
   <!-- Segment -->
+
   <script>
     !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
     analytics.load("fAeTHy0QuTG6bcNSlw3aWUxsMB8S35IL");

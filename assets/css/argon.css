@@ -719,11 +719,9 @@ kbd kbd
 
 pre
 {
-    font-size: 87.5%;
+    font-size: 87.5%; 
 
     display: block;
-
-    color: #212529;
 }
 pre code
 {
@@ -16409,10 +16407,8 @@ textarea[resize='horizontal']
     {
         display: block;
 
-        margin-bottom: 1rem;
+        margin-bottom: 1rem; 
         padding-bottom: 1rem;
-
-        border-bottom: 1px solid rgba(0, 0, 0, .1);
     }
     .navbar-collapse .collapse-brand img
     {
