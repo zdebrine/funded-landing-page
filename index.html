@@ -19,6 +19,7 @@
 
   <!-- Argon CSS -->
   <link type="text/css" href="./assets/css/argon.css?v=1.0.1" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/prism.css">
         
   <!-- Code Syntax Highlighting -->
   <!-- <link rel="stylesheet" href="./assets/js/highlight/styles/obsidian.css">
@@ -520,29 +521,30 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDele
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glorious/demo/dist/gdemo.min.css"> 
 <script src="https://cdn.jsdelivr.net/npm/@glorious/demo/dist/gdemo.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
+<script src="./assets/js/prism.js"></script>
 <script>
     const demo = new GDemo('#code-container');
 
     const code = `
-    import CoreLocation
-    import SpotSense
+import CoreLocation
+import SpotSense
 
-    let spotsense = SpotSense(clientID: "client-id", clientSecret: "client-secret")
+let spotsense = SpotSense(clientID: "client-id", clientSecret: "client-secret")
 
-    class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDelegate {
-      let locationManager : CLLocationManager = CLLocationManager()
-      override func viewDidLoad() {
-        super.viewDidLoad()
+class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDelegate {
+  let locationManager : CLLocationManager = CLLocationManager()
+  override func viewDidLoad() {
+    super.viewDidLoad()
 
-        // get location permissions
-        locationManager.requestAlwaysAuthorization()
-        locationManager.delegate = self
-        spotsense.delegate = self
+    // get location permissions
+    locationManager.requestAlwaysAuthorization()
+    locationManager.delegate = self
+    spotsense.delegate = self
 
-        spotsense.startMonitoring() // this is where the magic happens
-      }
-    };`
+    spotsense.startMonitoring() // this is where the magic happens
+  }
+
+};`
 
     const highlightedCode = Prism.highlight(
       code,
