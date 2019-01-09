@@ -20,13 +20,13 @@
   <!-- Argon CSS -->
   <link type="text/css" href="./assets/css/argon.css?v=1.0.1" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/prism.css">
-        
+
   <!-- Code Syntax Highlighting -->
   <link rel="stylesheet" href="./assets/js/highlight/styles/obsidian.css">
   <script src="./assets/js/highlight/highlight.pack.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 
-  
+
 </head>
 
 <body>
@@ -68,6 +68,12 @@
                 <span class="nav-link-inner--text font-weight-bold">Pricing</span>
               </a>
             </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link" href="#" role="button">
+                <i class="ni ni-collection d-lg-none"></i>
+                <span class="nav-link-inner--text font-weight-bold">About us</span>
+              </a>
+            </li>
           </ul>
           <ul class="navbar-nav align-items-lg-center ml-lg-auto">
             <li class="nav-item">
@@ -104,14 +110,14 @@
                 <div class="col-lg-5 mb-5 mb-lg-0">
                   <h1 class="text-white">Build real world interactions that your users love </h1>
                   <p class="lead text-white mt-4">
-                      With our geofences + location analytics, you can make the physical world part of your user's experience.<br><br>
+                      SpotSense helps you leverage location context to build a more personalized user experience.<br><br>
                       The best part? It takes less than 5 minutes.
                   </p>
                   <div class="btn-wrapper mt-5">
-                      <a id="documentation-button" href="http://docs.spotsense.io" class="btn btn-lg btn-white btn-icon mb-3 mb-sm-0">
+                      <a id="documentation-button" href="https://docs.spotsense.io" class="btn btn-lg btn-white btn-icon mb-3 mb-sm-0">
                         <span class="btn-inner--text">Documentation</span>
                       </a>
-                      <a id="create-geofence-button" href="http://dashboard.spotsense.io" class="btn btn-lg btn-success mb-3 mb-sm-0" target="_blank">
+                      <a id="create-geofence-button" href="https://dashboard.spotsense.io" class="btn btn-lg btn-success mb-3 mb-sm-0" target="_blank">
                         <span class="btn-inner--text">Create a Geofence</span>
                       </a>
                     </div>
@@ -124,117 +130,46 @@
       </section>
     </div>
 
-    <section class="section" id="get-started-analytics">
+    <section class="section" id="get-started-subheader">
       <div class="container">
         <div style="margin-bottom: 30px;" class="row justify-content-center">
           <div class="col-sm-12">
-            <h1 class="mb-2 text-center">Geofencing + Location Analytics for Developers</h1>
+            <h1 class="mb-2 text-center">Create 🔥 app experiences through location context</h1>
             <div class="row">
                 <div class="col-md-8 offset-md-2">
-                  <p>As a mobile developer, you deserve to have tools made for you to solve real world problems, not annoying users with push notifications. Because we eliminate complex location infrastructure, you can start adding geofences to your mobile app in just a couple of minutes.</p>
+                  <p>Mobile apps can easily get lost in the sea of applications on our devices. SpotSense helps you cut through that noise by providing your users with contextually driven experiences based on their location. Increasing engagement and retention with your mobile app.</p>
                 </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-10 offset-md-1">
-            <!-- <div id ="code-container"></div> -->
-              <pre><code style="padding: 25px;" id="code-analytics" class="swift">import CoreLocation
-import SpotSense
-
-let spotsense = SpotSense(clientID: "client-id", clientSecret: "client-secret")
-
-class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDelegate {
-  let locationManager : CLLocationManager = CLLocationManager()
-  override func viewDidLoad() {
-    super.viewDidLoad()
-
-    // get location permissions
-    locationManager.requestAlwaysAuthorization()
-    locationManager.delegate = self
-    spotsense.delegate = self
-
-    spotsense.startMonitoring() // this is where the magic happens
-  }
-}</code></pre>
-          </div>          
-        </div>
-      </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <h1 class="display-1 text-center">Geofences <p>Beta is <a href="">open now</a></p></h1>
+        <h1 class="display-1 text-center">Geofencing <p>Beta is <a href="">open now</a></p></h1>
         <div class="row justify-content-center">
             <div class="col-sm-12">
-                <h2 class="mb-2 text-center">Interact with your users in the physical world </h1>
+                <h2 class="mb-2 text-center">Engage your users when and where they need you most </h1>
           </div>
         </div>
         <div class="row">
             <div class="col-md-8 offset-md-2 text-center">
-              <p>Create location-based experiences for your users with the SpotSense rule creation engine</p>
+              <p>Create relevant location-based experiences with the SpotSense SDK and Dashboard</p>
             </div>
         </div>
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <img style="max-width: 100%" src="./assets/img/misc/examples.png">
+          </div>
+        </div>
 
-        <div class="row justify-content-center" style="margin-top: 40px;">
-          <div class="col-lg-12">
-            <div class="row row-grid">
-              <div class="col-lg-4">
-                <div class="card shadow border-0">
-                  <div class="card-body py-5">
-                    <div class="text-center mb-4">
-                        <i class="fas fa-4x fa-building"></i>
-                    </div>
-                    <h6 class="text-primary">1. Choose a Place</h6>
-                    <p class="description mt-3">Draw a geofence around any place where you want your users to have an interaction</p>
-                    <div>
 
-                    </div>
-                    <a id="download-template-button" target="_blank" href="https://github.com/spotsenseio/sampleapp-ios" class="btn btn-success mt-4">Download Template</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4">
-                <div class="card shadow border-0">
-                  <div class="card-body py-5">
-                    <div class="text-center mb-4">
-                      <!-- <i class="fas fa-bolt"></i> -->
-                      <i class="far fa-4x fa-bell"></i>
-                    </div>
-                    <h6 class="text-primary">2. Choose an Action</h6>
-                    <p class="description mt-3">Send a notification, do an HTTP request, change screens, or just people watch!</p>
-                    <div>
-
-                    </div>
-                    <a id="create-a-rule-button" target="_blank" href="http://dashboard.spotsense.io" class="btn btn-success mt-4">Create a Rule</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4">
-                <div class="card shadow border-0">
-                  <div class="card-body py-5">
-                    <div class="text-center mb-4">
-                        <i class="fas fa-4x fa-rocket"></i>
-                    </div>
-                    <h6 class="text-primary">3. Launch</h6>
-                    <p class="description mt-3">Launch your geofence to your app without resubmitting it to the App Store</p>
-                    <div>
-                    </div>
-                    <a id="how-to-test-button" href="http://docs.spotsense.io/testing-geofences" class="btn btn-success mt-4">How to test</a>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
 
-        
-      </div> 
+
+      </div>
 
     </section>
-    
+
     <section class="section">
         <div class="container">
           <h1 class="display-1 text-center">Analytics <p>Coming Soon</p></h1>
@@ -243,20 +178,54 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDele
               <h2 class="mb-0 text-center">Monitor Places + Understand Your Users</h2>
             </div>
           </div>
-          
-          
+
+
           <div class="row" style="margin-bottom: 34px;">
-              <div class="col-md-8 offset-md-2">
-                <p class="description">Monitor places to see when your users enter, exit, dwell, and return to the boundaries of your geofence</p>
+              <div class="col-md-8 offset-md-2 text-center">
+                <p class="description">Discover valuable insights on how your users are interacting with real world places </p>
               </div>
           </div>
-          
+
           <div class="row">
-            <div class="col-md-4">
-                <canvas id="locationPermissions"></canvas>
+            <div class="col-md-10 offset-md-1">
+              <img style="max-width: 100%" src="./assets/img/misc/analytics-landing.png">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="get-started-analytics">
+        <div class="container">
+          <div style="margin-bottom: 30px;" class="row justify-content-center">
+            <div class="col-sm-12">
+              <h1 class="mb-2 text-center">Build location features for your app, faster</h1>
+              <div class="row">
+                  <div class="col-md-8 offset-md-2">
+                    <p>You and your team deserve to have tools that help solve real world problems as quickly as possible. Because we eliminate complex location infrastructure, you can start adding geofences to your mobile app in just a couple of minutes.</p>
+                  </div>
               </div>
-            <div class="col-md-8">
-              <canvas id="getTimeSeries_7d"></canvas>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-10 offset-md-1">
+              <!-- <div id ="code-container"></div> -->
+                <pre><code style="padding: 25px;" id="code-analytics" class="swift">import CoreLocation
+  import SpotSense
+
+  let spotsense = SpotSense(clientID: "client-id", clientSecret: "client-secret")
+
+  class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDelegate {
+    let locationManager : CLLocationManager = CLLocationManager()
+    override func viewDidLoad() {
+      super.viewDidLoad()
+
+      // get location permissions
+      locationManager.requestAlwaysAuthorization()
+      locationManager.delegate = self
+      spotsense.delegate = self
+
+      spotsense.startMonitoring() // this is where the magic happens
+    }
+  }</code></pre>
             </div>
           </div>
         </div>
@@ -270,7 +239,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDele
                 <h2 class="mb-5 text-center">Add a geofence in less than 5 minutes</h2>
               </div>
             </div>
-            
+
             <div class="row">
               <div class="col-md-8 offset-md-2">
                   <div class="d-flex px-3">
@@ -322,7 +291,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDele
                       </div>
                   </div>
                 </div>
-            
+
             <div style="margin-bottom: 20px;" class="row justify-content-center">
                 <!-- <h1 class="mb-0">Tutorials</h1> -->
                 <h2 class="mt-5 mb-2">Tutorials</h2>
@@ -382,7 +351,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDele
   <script src="./assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
   <!-- Argon JS -->
   <script src="./assets/js/argon.js?v=1.0.1"></script>
-  
+
   <!-- Chart JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
   <script src="./assets/js/generatedata.js"></script>
@@ -416,7 +385,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDele
           type: 'line',
       data: {
         labels: arr[0],
-        datasets: [{ 
+        datasets: [{
             data: arr[1],
             label: "Visitors",
             borderColor: "#2dce89",
