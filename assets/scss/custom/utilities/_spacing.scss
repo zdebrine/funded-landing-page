@@ -103,3 +103,10 @@
         padding-bottom: 300px!important;
     }
 }
+
+
+.equal { // gives equal height columns
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;  
+}

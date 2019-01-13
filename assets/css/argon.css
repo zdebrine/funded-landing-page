@@ -13844,6 +13844,14 @@ button.section-darker:focus
     }
 }
 
+.equal
+{
+    display:         flex;
+    display: -webkit-flex;
+
+    flex-wrap: wrap;
+}
+
 [class*='shadow']
 {
     transition: all .15s ease;
@@ -17856,6 +17864,11 @@ article figure
 article h5 + figure
 {
     margin-top: 0;
+}
+
+.analytic-item
+{
+    cursor: pointer;
 }
 
 .datepicker
