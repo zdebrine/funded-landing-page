@@ -161,17 +161,48 @@
         <div class="row row-grid align-items-center">
           <div class="col-md-6 order-lg-2 ml-lg-auto mt-5">
             <div class="position-relative pl-md-5">
-              <img src="../assets/img/misc/goober-phone.png" class="img-center img-fluid">
+
+              <!-- Hidden Tab Controls -->
+              <div class="nav-wrapper" style="display: none;">
+                <ul class="nav nav-pills nav-pills-circle d-flex justify-content-center" id="engagement-tabs" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link rounded-circle active" id="grow-engagement-selector" data-toggle="tab" href="#grow-engagement" role="tab" aria-controls="grow-engagement" aria-selected="true">
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="delight-users-selector" data-toggle="tab" href="#delight-users" role="tab" aria-controls="delight-users" aria-selected="false">
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="automate-processes-selector" data-toggle="tab" href="#automate-processes" role="tab" aria-controls="delight-users" aria-selected="false">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Images to switch out -->
+              <div class="tab-content" id="engagementTabContent">
+                  <div class="tab-pane fade show active" id="grow-engagement" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab">
+                    <img src="../assets/img/misc/goober-phone.png" class="img-center img-fluid">
+                  </div>
+                  <div class="tab-pane fade" id="delight-users" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
+                    <img src="../assets/img/misc/restaurant-notification.png" class="img-center img-fluid">
+                  </div>
+                  <div class="tab-pane fade" id="automate-processes" role="tabpanel" aria-labelledby="tabs-icons-text-3-tab">
+                    <img src="../assets/img/misc/event-notification.png" class="img-center img-fluid">
+                  </div>
+              </div>
+
             </div>
           </div>
 
-          <div class="col-lg-6 order-lg-1 mt-0">
+          <div  class="col-lg-6 order-lg-1 mt-0">
             <!-- Card 1 -->
-            <div class="card shadow shadow-lg--hover mt-0">
+            <div id="grow-engagement-selector" class="card shadow shadow-lg--hover mt-0 engagement-item">
               <div class="card-body">
                 <div class="d-flex">
                   <div>
-                    <div class="icon icon-shape bg-gradient-info rounded-circle text-white">
+                    <div id="grow-engagement-selector-icon" class="icon icon-shape bg-gradient-success rounded-circle text-white">
                       <i class="ni ni-active-40"></i>
                     </div>
                   </div>
@@ -183,11 +214,11 @@
             </div>
 
             <!-- Card 2 -->
-            <div class="card shadow shadow-lg--hover mt-5">
+            <div id="delight-users-selector" class="card shadow shadow-lg--hover mt-5 engagement-item">
               <div class="card-body">
                 <div class="d-flex">
                   <div>
-                    <div class="icon icon-shape bg-gradient-info rounded-circle text-white">
+                    <div id="delight-users-selector-icon" class="icon icon-shape bg-gray rounded-circle text-white">
                       <i class="ni ni-satisfied"></i>
                     </div>
                   </div>
@@ -199,11 +230,11 @@
             </div>
 
             <!-- Card 3 -->
-            <div class="card shadow shadow-lg--hover mt-5">
+            <div id="automate-processes-selector" class="card shadow shadow-lg--hover mt-5 engagement-item">
               <div class="card-body">
                 <div class="d-flex">
                   <div>
-                    <div class="icon icon-shape bg-gradient-info rounded-circle text-white">
+                    <div id="automate-processes-selector-icon" class="icon icon-shape bg-gray rounded-circle text-white">
                       <i class="ni ni-check-bold"></i>
                     </div>
                   </div>
@@ -213,10 +244,12 @@
                 </div>
               </div>
             </div>
+
           </div>
         </div>
 
       </div>
+
       <!-- SVG separator -->
       <div class="separator separator-bottom separator-skew zindex-100">
         <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -224,6 +257,8 @@
         </svg>
       </div>
     </section>
+
+    <!-- Location Analytics -->
     <section class="section">
         <div class="container">
           <h1 class="text-left">Location analytics for data driven decisions</h1>
