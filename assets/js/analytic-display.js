@@ -51,7 +51,7 @@ $(".analytic-item").click(function(e) {
         }
     }
 
-    $(`#analytics-analyticTabs a[href="#${tabID}"]`).tab('show');
+    $(`#analytics-tabs a[href="#${tabID}"]`).tab('show');
 })
 
 
@@ -78,7 +78,7 @@ setInterval(function(){
             }
         }
 
-        $(`#analytics-analyticTabs a[href="#${currentTab}"]`).tab('show');
+        $(`#analytics-tabs a[href="#${currentTab}"]`).tab('show');
         index++;
 
 
