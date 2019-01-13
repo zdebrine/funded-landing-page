@@ -17872,7 +17872,8 @@ article h5 + figure
     margin-top: 0;
 }
 
-.analytic-item
+.analytic-item,
+.engagement-item
 {
     cursor: pointer;
 }
