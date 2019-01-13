@@ -17871,6 +17871,26 @@ article h5 + figure
     cursor: pointer;
 }
 
+.gradient-bg
+{
+    background: linear-gradient(150deg, #0083ec 15%, #04a7f7 70%, #04befe 94%);
+}
+
+.selected
+{
+    border-top: 2px solid #0083ec;
+}
+
+.not-selected
+{
+    padding-top: 7px !important;
+}
+
+.analytic-item
+{
+    padding-top: 5px;
+}
+
 .datepicker
 {
     border-radius: .25rem;

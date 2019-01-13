@@ -103,30 +103,29 @@
 
       <section class="section section-lg section-hero section-shaped">
         <!-- Background -->
-        <div class="shape shape-style-1 shape-primary">
-        </div>
+        <div class="shape shape-style-1 shape-primary"></div>
 
         <div class="container shape-container d-flex align-items-center" style="padding-top: 20px">
           <div class="row justify-content-between align-items-center">
-                <div class="col-lg-5 mb-5 mb-lg-0">
-                  <h1 class="text-white">Build real world interactions that your users love </h1>
-                  <p class="lead text-white mt-4">
-                      SpotSense helps you leverage location context to build a more personalized user experience.<br><br>
-                      The best part? It takes less than 5 minutes.
-                  </p>
-                  <div class="btn-wrapper mt-5">
-                      <a id="documentation-button" href="https://docs.spotsense.io" class="btn btn-lg btn-white btn-icon mb-3 mb-sm-0">
-                        <span class="btn-inner--text">Documentation</span>
-                      </a>
-                      <a id="create-geofence-button" href="https://dashboard.spotsense.io" class="btn btn-lg btn-success mb-3 mb-sm-0" target="_blank">
-                        <span class="btn-inner--text">Create a Geofence</span>
-                      </a>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-lg-auto">
-                  <img style="max-width: 100%" src="./assets/img/buildings/single-spotsense-building.png">
+            <div class="col-lg-5 mb-5 mb-lg-0">
+              <h1 class="text-white">Build real world interactions that your users love </h1>
+              <p class="lead text-white mt-4">
+                  SpotSense helps you leverage location context to build a more personalized user experience.<br><br>
+                  The best part? It takes less than 5 minutes.
+              </p>
+              <div class="btn-wrapper mt-5">
+                  <a id="documentation-button" href="https://docs.spotsense.io" class="btn btn-lg btn-white btn-icon mb-3 mb-sm-0">
+                    <span class="btn-inner--text">Documentation</span>
+                  </a>
+                  <a id="create-geofence-button" href="https://dashboard.spotsense.io" class="btn btn-lg btn-success mb-3 mb-sm-0" target="_blank">
+                    <span class="btn-inner--text">Create a Geofence</span>
+                  </a>
                 </div>
             </div>
+            <div class="col-lg-6 mb-lg-auto">
+              <img style="max-width: 100%" src="./assets/img/buildings/single-spotsense-building.png">
+            </div>
+          </div>
         </div>
       </section>
     </div>
@@ -248,15 +247,15 @@
           </div>
 
           <div id="analytic-columns">
-            <div class="row">
-              <div id="where-selector" class="col-4 analytic-item">
-                <p class="display-4">Where are our users?</p>
+            <div class="row titles">
+              <div id="where-selector" class="selected col-4 analytic-item">
+                <p class=" display-4">Where are our users?</p>
               </div>
               <div id="when-selector" class="col-4 analytic-item">
-                <p class="display-4">When should we engage with users?</p>
+                <p class=" display-4">When should we engage with users?</p>
               </div>
               <div id="how-selector" class="col-4 analytic-item">
-                <p class="display-4">How are users responding?</p>
+                <p class="display-4 ">How are users responding?</p>
               </div>
             </div>
   
@@ -298,55 +297,47 @@
       </section>
       <section class="section" id="get-started-analytics">
         <div class="container">
-          <div style="margin-bottom: 30px;" class="row justify-content-center">
-            <div class="col-sm-12">
-              <h1 class="mb-2 text-center">Build location features for your app, faster</h1>
-              <div class="row">
-                  <div class="col-md-8 offset-md-2">
-                    <p>You and your team deserve to have tools that help solve real world problems as quickly as possible. Because we eliminate complex location infrastructure, you can start adding geofences to your mobile app in just a couple of minutes.</p>
-                  </div>
-              </div>
-            </div>
-          </div>
           <div class="row">
-            <div class="col-md-10 offset-md-1">
-              <!-- <div id ="code-container"></div> -->
-                <pre><code style="padding: 25px;" id="code-analytics" class="swift">import CoreLocation
-  import SpotSense
+              <div class="col-md-6">
+                  <h1 class="mb-4 text-left">Limitless Possibilities</h1>
+                  <p>You and your team deserve to have tools that help solve real world problems as quickly as possible. Because we eliminate complex location infrastructure, you can start adding geofences to your mobile app in just a couple of minutes.</p>
+                </div>
+                <div class="mt-3 col-md-6">
+                  <!-- <div id ="code-container"></div> -->
+                    <pre><code style="padding: 25px; float: right;" id="code-analytics" class="swift">override func viewDidLoad() {
+  super.viewDidLoad()
 
-  let spotsense = SpotSense(clientID: "client-id", clientSecret: "client-secret")
+  locationManager.requestAlwaysAuthorization()
+  locationManager.delegate = self
+  spotsense.delegate = self
 
-  class ViewController: UIViewController, CLLocationManagerDelegate, SpotSenseDelegate {
-    let locationManager : CLLocationManager = CLLocationManager()
-    override func viewDidLoad() {
-      super.viewDidLoad()
-
-      // get location permissions
-      locationManager.requestAlwaysAuthorization()
-      locationManager.delegate = self
-      spotsense.delegate = self
-
-      spotsense.startMonitoring() // this is where the magic happens
-    }
-  }</code></pre>
-            </div>
+  spotsense.startMonitoring()
+}</code></pre>
+                </div>
           </div>
         </div>
       </section>
-      <section class="section section-lg pt-0">
+
+      <section class="section section-lg pt-0 shape-primary">
+        <!-- <div class="shape-primary"></div> -->
         <div class="container">
-          <div class="card bg-gradient-secondary border-0">
-            <div class="p-5">
-              <div class="row align-items-center">
-                <div class="col-lg-6">
-                  <h1 class="text-default">Start your free trial</h1>
-                  <p class="lead text-default mt-3">Try SpotSense for your mobile app</p>
-                </div>
-                <div class="col-lg-5 ml-lg-auto mt-0">
-                  <a href=pricing.html class="btn btn-lg btn-block btn-success">Get Started</a>
-                  <p class="text-left mt-2 mb-0">14-day Free Trial &bull; Cancel Any Time</p>
+          <div class="row">
+            <div class="col-12">
+              <div class="card gradient-bg border-0">
+                <div class="p-5">
+                  <div class="row align-items-center">
+                    <div class="col-lg-6">
+                      <h1 class="text-white">Start your free trial</h1>
+                      <p class="lead text-white mt-3">Try SpotSense for your mobile app</p>
+                    </div>
+                    <div class="col-lg-5 ml-lg-auto mt-0 text-white">
+                      <a href=pricing.html class="btn btn-lg btn-block btn-success">Get Started</a>
+                      <p class="text-left mt-2 mb-0">14-day Free Trial &bull; Cancel Any Time</p>
+                    </div>
+                  </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>

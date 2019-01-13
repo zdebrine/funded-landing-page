@@ -1,3 +1,23 @@
 .analytic-item {
     cursor: pointer;
 }
+
+.gradient-bg {
+    background: linear-gradient(150deg, shapes-primary-color("step-1-gradient-bg") 15%, shapes-primary-color("step-2-gradient-bg") 70%, shapes-primary-color("step-3-gradient-bg") 94%);
+}
+
+.selected {
+    // margin-right: 5px;
+    // margin-left: 5px;
+    border-top: 2px solid shapes-primary-color("step-1-gradient-bg");
+    // padding-top: 5px;
+}
+
+.not-selected {
+    padding-top: 7px !important;
+}
+
+.analytic-item {
+    padding-top: 5px;
+}
+
