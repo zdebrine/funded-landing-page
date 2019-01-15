@@ -151,7 +151,7 @@
       <div class="container">
         <h1 class="text-left text-white">Geofencing tools that drive engagement </h1>
         <div class="row">
-          <div class="col-8">
+          <div class="col-md-8 col-12">
             <p class="lead mb-0 text-left text-white">Use location to send contextual push notifications, build relevant in-app experiences, power automatic check in, and more</p>
           </div>
         </div>
@@ -284,8 +284,9 @@
               </div>`
             </div>
           </div>
-
-          <div id="analytic-columns">
+          
+          <!-- desktop version -->
+          <div id="analytic-columns" class="desktop-only">
             <div class="row titles">
               <div id="where-selector" class="selected col-4 analytic-item">
                 <p class=" display-4">Where are our app users?</p>
@@ -310,6 +311,35 @@
                   <p class="lead text mt-3">See how your location based experiences are performing with your users. Optimize valuable metrics like open rate and number of visits.</p>
               </div>
             </div>
+          </div>
+
+          <!-- mobile version -->
+          <div id="analytic-columns" class="mobile-only">
+                <div class="row">
+                  <div id="where-selector" class="col analytic-item">
+                      <div class="titles">
+                        <p class=" display-4">Where are our app users?</p>
+                      </div>
+                        <p class="lead text mt-3">Take the guessing out of building location based features. SpotSense gives you a bird's eye view of your users around the world.</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div id="when-selector" class="col analytic-item">
+                    <div class="titles">
+                      <p class=" display-4">When should we engage?</p>
+                    </div>
+                    <p class="lead text mt-3">Monitor locations for the presence of your app users. How often are they coming to your store or restaurant? How often are they going to competitors?</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div id="how-selector" class="col analytic-item">
+                      <div class="titles">
+                        <p class="display-4 ">How are users responding?</p>    
+                      </div>
+                      <p class="lead text mt-3">See how your location based experiences are performing with your users. Optimize valuable metrics like open rate and number of visits.</p>
+                  </div>
+                </div>
+
           </div>
 
           <!-- Start Tab Selectors (hidden) -->
@@ -337,20 +367,18 @@
       <section class="section" id="get-started-analytics">
         <div class="container">
           <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-5">
                   <h1 class="mb-4 text-left">Location Features, Faster</h1>
-                  <p>You and your team deserve to have tools that help solve real world problems as quickly as possible. <strong>We eliminate complex location infrastructure, so you can start building location-based experiences for your app users in just a couple of minutes.</strong></p>
+                  <p>You and your team deserve to have tools that help solve real world problems as quickly as possible.</p>
+                  <p><strong>We eliminate complex location infrastructure, so you can start building location-based experiences for your app users in just a couple of minutes.</strong></p>
                 </div>
-                <div class="mt-3 col-md-6">
+                <div class="mt-3 col-md-7">
                   <!-- <div id ="code-container"></div> -->
-                    <pre><code style="padding: 25px; float: right;" id="code-analytics" class="swift">override func viewDidLoad() {
-  super.viewDidLoad()
+                    <pre><code style="padding: 25px; float: right; max-width: 100%; overflow-x: scroll;" id="code-analytics" class="swift"> func userInteractedWithGeofence(interaction: Interaction) {
+  checkInUserToEvent(interaction.user.id);
+  alert("Welcome to \(interaction.metadata.eventName), 
+         \(interaction.user.name)!")
 
-  locationManager.requestAlwaysAuthorization()
-  locationManager.delegate = self
-  spotsense.delegate = self
-
-  spotsense.startMonitoring()
 }</code></pre>
                 </div>
           </div>

@@ -17898,6 +17898,26 @@ article h5 + figure
     padding-top: 5px;
 }
 
+@media (max-width: 991px)
+{
+    .desktop-only,
+    .hide-on-mobile
+    {
+        display: none !important;
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 991px)
+{
+    .mobile-only,
+    .hide-on-desktop
+    {
+        display: none !important;
+        visibility: hidden;
+    }
+}
+
 .datepicker
 {
     border-radius: .25rem;

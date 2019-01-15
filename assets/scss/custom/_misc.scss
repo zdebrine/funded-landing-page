@@ -22,3 +22,19 @@
     padding-top: 5px;
 }
 
+@media (max-width: $screen-sm-max) {
+    .desktop-only,
+    .hide-on-mobile {
+        display: none !important;
+        visibility: hidden;
+    }
+}
+
+@media (min-width: $screen-sm-max) {
+    .mobile-only,
+    .hide-on-desktop {
+        display: none !important;
+        visibility: hidden;
+    }
+}
+
