@@ -17196,7 +17196,7 @@ textarea[resize='horizontal']
 }
 .section-shaped .shape-primary
 {
-    background: linear-gradient(150deg, #00a2ff 15%, #0094df 70%, #008cc4 94%);
+    background: linear-gradient(150deg, #0083ec 15%, #04a7f7 70%, #04befe 94%);
 }
 .section-shaped .shape-primary :nth-child(1)
 {
@@ -17414,7 +17414,7 @@ textarea[resize='horizontal']
 }
 .section-shaped .shape-style-1.shape-primary
 {
-    background: linear-gradient(150deg, #40a0ff 15%, #1583dd 70%, #004e97 94%);
+    background: linear-gradient(150deg, #0083ec 15%, #04a7f7 70%, #04befe 94%);
 }
 .section-shaped .shape-style-1.shape-default
 {
