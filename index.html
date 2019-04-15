@@ -126,12 +126,12 @@
             <div class="col-lg-7 mb-5 mb-lg-0">
               <h1 class="display-2 text-white">Build better user experiences with a powerful geofencing platform</h1>
               <p class="lead text-white mt-4">
-                  Add the SpotSense SDK to your mobile app to quickly create geofences. Then engage your users in real world places.<br><br>
+                  Add SpotSense to your mobile app to quickly create geofences. Then engage your users in real world places.<br><br>
                   The best part? It takes less than 5 minutes.
               </p>
               <div class="btn-wrapper mt-5">
                   <a id="get-started-button" href="http://dashboard.spotsense.io" class="btn btn-lg btn-success mb-3 mb-sm-0">
-                    <span class="btn-inner--text">Create a geofence</span>
+                    <span class="btn-inner--text">Get started for free</span>
                   </a>
                    <a id="learn-more-button" href="#get-started-subheader" class="btn btn-lg btn-white btn-icon mb-3 mb-sm-0">
                     <span class="btn-inner--text">Learn more</span>
@@ -152,9 +152,10 @@
         <div style="margin-bottom: 30px;" class="row text-left">
           <div class="col-md-8">
 
-            <h6 class="mb-2 text-left text-muted">Geofencing tools </h6>
-            <h1 class="mb-3 text-left">Create unique location features that drive app engagement</h1>
-            <h5 class="mb-4 text-left text-muted">Your mobile app can easily get lost in the sea of applications on a user's device. Cut through that noise by providing your users with contextually driven experiences based on their location. </h5>
+            <h6 class="mb-2 text-left text-muted">Location as an interface </h6>
+            <h1 class="mb-3 text-left">The user journey doesn't have to end when they close your app</h1>
+            <!-- <h5 class="mb-4 text-left text-muted">Your mobile app can easily get lost in the sea of applications on a user's device. Cut through that noise by providing your users with contextually driven experiences based on their location. </h5> -->
+            <h5 class="mb-4 text-left text-muted">Your users don't cease to exist once they exit your mobile app. They go about their day to day lives and visit places in the real world. What if you could leverage that movement to build unique experiences for your users? Meet SpotSense. </h5>
           </div>
           <div class="col-md-4">
             <img style="max-width: 100%; display: block; margin: auto;" src="./assets/img/misc/subheader-use-cases.png">
@@ -166,11 +167,11 @@
     <!-- Build location features... -->
     <section class="section pb-0 gradient-bg">
       <div class="container">
-        <h6 class="mb-2 text-left text-white">Dashboard </h6>
-        <h1 class="text-left text-white mb-2">Manage all your geofences from a single dashboard</h1>
+        <h6 class="mb-2 text-left text-white">Geofencing tools </h6>
+        <h1 class="text-left text-white mb-2">Monitoring locations is as easy as drawing a circle</h1>
         <div class="row">
           <div class="col-md-10 col-12">
-            <h5 class="text-left text-white">The SpotSense dashboard helps you create and manage geofences for your app without constantly having to update code. Supercharge your mobile app with less time spent in Xcode.</h5>
+            <h5 class="text-left text-white">The SpotSense dashboard helps you create and manage geofences for your app without constantly having to update code. Start tracking when users visit a location instantly with SpotSense geofences.</h5>
           </div>
         </div>
 
@@ -192,25 +193,44 @@
 
     <section class="section">
         <div class="container">
-            <h6 class="mb-2 text-left text-muted">Integrations </h6>
-            <h1 class="text-left">Send real-world visit data to your favorite platforms</h1>
+            <h6 class="mb-2 text-left text-muted">Seamless integrations </h6>
+            <h1 class="text-left">Supercharge your favorite platforms with location data</h1>
               <div class="row">
-                <div class="col-md-10 col-12">
-                  <h5 class="mb-4 text-left">SpotSense uses Segment to forward geofence data to hundreds of platforms. Enrich the data you're sending to places like Mixpanel and Google analytics with real world entry and exit events.</h5>
+                <div class="col-12">
+                  <h5 class="mb-4 text-left text-muted">SpotSense uses Segment to forward geofence data to over 200 platforms. Enrich the data you're sending to places like Mixpanel and Google Analytics with real world entry and exit events.</h5>
+                  <div class="nav-wrapper">
+                      <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icons-text" role="tablist">
+                          <li class="nav-item">
+                              <a class="nav-link mb-sm-3 mb-md-0 active" id="tabs-icons-text-1-tab" data-toggle="tab" href="#tabs-icons-text-1" role="tab" aria-controls="tabs-icons-text-1" aria-selected="true"><i class="ni ni-chat-round mr-2"></i>Engage users</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-2-tab" data-toggle="tab" href="#tabs-icons-text-2" role="tab" aria-controls="tabs-icons-text-2" aria-selected="false"><i class="ni ni-chart-bar-32 mr-2"></i>Understand behavior</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-3-tab" data-toggle="tab" href="#tabs-icons-text-3" role="tab" aria-controls="tabs-icons-text-3" aria-selected="false"><i class="ni ni-email-83 mr-2"></i>Customize campaigns</a>
+                          </li>
+                      </ul>
+                  </div>
                 </div>
               </div>
 
                 <!-- integrations section -->
                 <div id="integrations">
                   <div class="row mt-4">
-                    <div class="col-md-4">
-                      <img style="max-width: 100%" src="./assets/img/misc/events.png">
-                    </div>
-                    <div class="col-md-4">
-                      <img style="max-width: 100%" src="./assets/img/misc/segment.png">
-                    </div>
-                    <div class="col-md-4">
-                      <img style="max-width: 100%" src="./assets/img/misc/destinations.png">
+                    <div class="col-md-12">
+                      <div class="row">
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab">
+                                <img style="max-width: 100%" src="./assets/img/misc/Segment-Intercom.png">    
+                                </div>
+                                <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
+                                  <img style="max-width: 100%" src="./assets/img/misc/Segment-Mixpanel.png"> 
+                                </div>
+                                <div class="tab-pane fade" id="tabs-icons-text-3" role="tabpanel" aria-labelledby="tabs-icons-text-3-tab">
+                                  <img style="max-width: 100%" src="./assets/img/misc/Segment-Mailchimp.png"> 
+                                </div>
+                            </div>
+                        </div>
                     </div>
                   </div>
                   <div class="col-md-12 col-12">
@@ -218,7 +238,7 @@
                     <div class="container">
                       <div class="row row-grid justify-content-center">
                         <div class="col-lg-8 text-center">
-                          <a href="https://segment.com/catalog/" target="_blank" class="btn btn-outline-white text-success mt-4">More about Segment integrations</a>
+                          <a href="https://segment.com/catalog/" target="_blank" class="btn btn-outline-white text-success mt-4">Check out the 200+ Segment integrations</a>
 
       </section>
 
