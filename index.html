@@ -309,7 +309,8 @@
                     <p class="lead text-white mt-3">Add the SpotSense SDK to your mobile app</p>
                   </div>
                   <div class="col-lg-5 ml-lg-auto mt-0 text-white">
-                    <a href="signup.html" class="btn btn-lg btn-block btn-success"> Add to my iOS app</a>
+                    <a id="get-started-button-bottom-of-page" href="signup.html"
+                      class="btn btn-lg btn-block btn-success"> Add to my iOS app</a>
                   </div>
                 </div>
               </div>
@@ -433,6 +434,32 @@
   </script>
 
   <script src="./assets/js/analytics.js"></script>
+
+  <script type="text/javascript">
+    var link = document.getElementById('get-started-button');
+    analytics.trackLink(link, 'CTA Clicked', {
+      location: 'Header',
+      color: 'Green',
+      text: 'Add to my iOS App',
+      CTA: 'Add SDK',
+      category: 'Home Page',
+      type: 'Button',
+      pageTitle: document.title
+    });
+  </script>
+
+  <script type="text/javascript">
+    var link = document.getElementById('get-started-button-bottom-of-page');
+    analytics.trackLink(link, 'CTA Clicked', {
+      location: 'Bottom of page',
+      color: 'Green',
+      text: 'Add to my iOS App',
+      CTA: 'Add SDK',
+      category: 'Home Page',
+      type: 'Button',
+      pageTitle: document.title
+    });
+  </script>
 </body>
 
 </html>
