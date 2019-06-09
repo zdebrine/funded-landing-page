@@ -116,7 +116,7 @@
         <span></span>
         <span></span>
       </div>
-      <div class="container pt-lg-md">
+      <div class="container pt-lg-md mb-5 mt-5">
         <div class="row justify-content-center">
           <div class="col-lg-8">
             <div class="card bg-secondary shadow border-0">
@@ -130,15 +130,22 @@
 
                 </div>
               </div>
-              <div class="card-body offset-lg-2">
-                <script id="signup-form" charset="utf-8" type="text/javascript"
-                  src="//js.hsforms.net/forms/shell.js"></script>
-                <script>
-                  hbspt.forms.create({
-                    portalId: "4987070",
-                    formId: "37aaab0a-43dd-4691-be0e-1392fe3f28e5"
-                  });
-                </script>
+              <div class="card-body" id="signup-form">
+                <form action="" class="main-form needs-validation" novalidate>
+                  <div class="row">
+                    <div class="col">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="user_email" id="email" class="form-control" required>
+                    <div class="invalid-feedback">Please enter a valid email.</div>
+                  </div>
+                  <div class="form-group mb-5">
+                  </div>
+                  <button type="submit" onclick="window.location.href = '/thank-you.html';"
+                    class="btn btn-primary">Submit</button>
+                </form>
               </div>
             </div>
           </div>
@@ -163,10 +170,6 @@
         </div>
         <div class="col-md-5">
           <ul class="nav nav-footer justify-content-end">
-            <li class="nav-item">
-              <!-- TODO: make this a modal window  -->
-              <!-- <a id="footer-careers" href="" class="nav-link" target="_blank">Careers</a> -->
-            </li>
             <li class="nav-item">
               <a id="footer-about" href="./about.html" class="nav-link">About Us</a>
             </li>
@@ -203,10 +206,47 @@
     !function () {
       var analytics = window.analytics = window.analytics || []; if (!analytics.initialize) if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice."); else {
         analytics.invoked = !0; analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on"]; analytics.factory = function (t) { return function () { var e = Array.prototype.slice.call(arguments); e.unshift(t); analytics.push(e); return analytics } }; for (var t = 0; t < analytics.methods.length; t++) { var e = analytics.methods[t]; analytics[e] = analytics.factory(e) } analytics.load = function (t, e) { var n = document.createElement("script"); n.type = "text/javascript"; n.async = !0; n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js"; var a = document.getElementsByTagName("script")[0]; a.parentNode.insertBefore(n, a); analytics._loadOptions = e }; analytics.SNIPPET_VERSION = "4.1.0";
-        analytics.load("fAeTHy0QuTG6bcNSlw3aWUxsMB8S35IL");
+        analytics.load("PwkPskGZW3B5aRgb5xFwCSKrw8wovZa4");
         analytics.page("Signup");
       }
     }();
+  </script>
+  <script src="./assets/js/analytics.js"></script>
+
+  <script>
+    // Grab a reference to our form
+    var form = $('.main-form');
+
+    // Setup a handler to run when the form is submitted
+    form.on('submit', function (e) {
+
+      // If some client-side validation kicked in and wants to prevent
+      // the form from submitting, bail out now without calling track or identify
+      if (e.isDefaultPrevented()) {
+        return
+      }
+
+      // If we got here, it's okay to fire our events and submit the form      
+
+      // Stop the form from submitting...for now
+      e.preventDefault();
+
+      // Identify this visitor using their email address as a distinct ID
+      // and as a new property
+      var email = form.find('[name=user_email]').val();
+      if (email) {
+        analytics.alias(email);
+        analytics.identify(email, {
+          email: email
+        });
+      }
+
+      // Track the event and include values from the form to our event props
+      analytics.track("User Signed Up", formValuesToProps(form));
+
+      // Submit the form now that all our analytics stuff is done
+      $(e.target).unbind('submit').trigger('submit');
+    });
   </script>
 
 </body>
