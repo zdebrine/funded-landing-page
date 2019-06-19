@@ -36,6 +36,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
     integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
+  <link rel="stylesheet" href="./assets/css/background.css">
 
   <!-- Argon CSS -->
   <link type="text/css" href="./assets/css/argon.css?v=1.0.1" rel="stylesheet">
@@ -119,12 +120,12 @@
   </header>
 
   <!-- Begin Main -->
-  <main>
+  <!--<main>
     <div class="position-relative">
 
       <section class="section section-lg section-hero section-shaped">
-        <!-- Background -->
-        <div class="shape shape-style-1"></div>
+        <!-- Background 
+        <div class="shape shape-style-1 bg-secondary"></div>
 
         <div class="container shape-container d-flex align-items-center" style="padding-top: 60px">
           <div class="row justify-content-between align-items-center">
@@ -133,9 +134,10 @@
             <img style="max-width: 100%" src="./assets/img/misc/Header-image.png">
           </div>
           <div class="col-lg-6 mb-5 ml-4">
-            <h1 class="display-2 text-default">User location tracking for your mobile app</h1>
+            <h1 class="display-2 text-default">User location intelligence for your mobile app</h1>
             <p class="lead text-default mt-4">
-              Add SpotSense to your mobile app to track the places your users visit. Use that data create location-based
+              Add SpotSense to your mobile app to understand where your users spend the most time. Use that data create
+              location-based
               interactions
               <br><br>
               The best part? You can integrate the SDK in less than 10 minutes.
@@ -147,14 +149,41 @@
               <p class="text-muted mt-2">Available for Swift </p>
               <!--<a id="learn-more-button" href="#monitor-locations-subheader" class="btn btn-lg btn-white">
                 <span class="btn-inner--text">Learn more</span>
-              </a> -->
+              </a> 
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </section>-->
+  <main>
+    <div class="position-relative">
 
-    <!-- Fit into the places... 
+      <section class="section section-lg bg-white">
+        <!-- Background -->
+        <div class="hero-image" style="height: 800px; padding-top: 100px;">
+
+          <div class="container">
+            <div class="row justify-content-between align-items-center">
+              <div class="col-sm-12 mb-lg-0 mt-4">
+                <h1 class="display-1 text-default text-center mx-3 px-5">User location intelligence for your mobile app
+                </h1>
+                <p class="lead text-default mx-3 mt-5 text-center px-5 pb-5">
+                  SpotSense is a powerful and accurate geofencing platform. Provide your app users with rich
+                  location-based experiences that drive app engagement.<br>
+                  <br>
+                  The best part? you can add the SDK to your app in 10 minutes.<br>
+                </p>
+                <div class="btn-wrapper text-center mt-5">
+                  <a id="get-started-button" href="signup.html" class="btn btn-lg btn-primary mb-3 mx-3 mb-sm-0">
+                    <span class="btn-inner--text"> Add to my iOS app</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+      </section>
+
+
+      <!-- Fit into the places... 
     <section class="section bg-secondary" id="get-started-subheader">
       <div class="container">
         <div style="margin-bottom: 30px;" class="row text-left">
@@ -176,48 +205,48 @@
       </div>
     </section> -->
 
-    <!-- Build location features... -->
-    <section class="section pb-0 bg-primary" id="monitor-locations-subheader">
-      <div class="container">
-        <h6 class="mb-2 text-left text-white">Geofencing tools </h6>
-        <h1 class="text-left text-white mb-2">Monitoring locations is as easy as drawing a circle</h1>
-        <div class="row">
-          <div class="col-md-10 col-12">
-            <h5 class="text-left text-white">The SpotSense dashboard helps you create and manage geofences for your
-              app
-              without constantly having to update code. Start tracking when users visit a location instantly with
-              SpotSense geofences.</h5>
-          </div>
-        </div>
-
-        <div class="row row-grid align-items-center">
-          <div class="col-md-12 order-lg-2 ml-lg-auto mt-5">
-            <div class="position-relative pl-md-12 mb-10">
-              <img style="max-width: 100%" src="./assets/img/misc/analytics-1.png">
+      <!-- Build location features... -->
+      <section class="section pb-0 bg-primary" id="monitor-locations-subheader">
+        <div class="container">
+          <h6 class="mb-2 text-left text-white">Geofencing tools </h6>
+          <h1 class="text-left text-white mb-2">Understand your user's offline behavior</h1>
+          <div class="row">
+            <div class="col-md-10 col-12">
+              <h5 class="text-left text-white">The SpotSense dashboard helps you create and manage geofences for your
+                app
+                without constantly having to update code. Start tracking when users visit a location instantly with
+                SpotSense geofences.</h5>
             </div>
           </div>
-        </div>
 
-        <!-- SVG separator -->
-        <div class="separator separator-bottom separator-skew zindex-100">
-          <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1"
-            xmlns="http://www.w3.org/2000/svg">
-            <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
-          </svg>
-        </div>
-    </section>
+          <div class="row row-grid align-items-center">
+            <div class="col-md-12 order-lg-2 ml-lg-auto mt-5">
+              <div class="position-relative pl-md-12 mb-10">
+                <img style="max-width: 100%" src="./assets/img/misc/analytics-1.png">
+              </div>
+            </div>
+          </div>
 
-    <section class="section">
-      <div class="container">
-        <h6 class="mb-2 text-left text-muted">Connect your data </h6>
-        <h1 class="text-left">Sync user location with cross-channel data</h1>
-        <div class="row">
-          <div class="col-10">
-            <h5 class="mb-4 text-left text-muted">Connect location data from SpotSense to over 200 data warehouses and
-              other cloud
-              destinations to enrich your user profiles. Use that data to create unique interactions
-              across any channel, including ads, email and push.</h5>
-            <!--<div class="nav-wrapper">
+          <!-- SVG separator -->
+          <div class="separator separator-bottom separator-skew zindex-100">
+            <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1"
+              xmlns="http://www.w3.org/2000/svg">
+              <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+          </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h6 class="mb-2 text-left text-muted">Connect your data </h6>
+          <h1 class="text-left">Sync user location with cross-channel data</h1>
+          <div class="row">
+            <div class="col-10">
+              <h5 class="mb-4 text-left text-muted">Connect location data from SpotSense to over 200 data warehouses and
+                other cloud
+                destinations to enrich your user profiles. Use that data to create unique interactions
+                across any channel, including ads, email and push.</h5>
+              <!--<div class="nav-wrapper">
               <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icons-text" role="tablist">
                 <li class="nav-item">
                   <a class="nav-link mb-sm-3 mb-md-0 active" id="tabs-icons-text-1-tab" data-toggle="tab"
@@ -236,40 +265,40 @@
                 </li>
               </ul>
             </div> -->
+            </div>
           </div>
-        </div>
 
-        <!-- integrations section -->
-        <div id="integrations">
-          <div class="row mt-4">
-            <div class="col-md-12">
-              <div class="row">
-                <div class="tab-content" id="myTabContent">
-                  <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel"
-                    aria-labelledby="tabs-icons-text-1-tab">
-                    <img style="max-width: 100%" src="./assets/img/misc/Segment-destination.png">
-                  </div>
-                  <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel"
-                    aria-labelledby="tabs-icons-text-2-tab">
-                    <img style="max-width: 100%" src="./assets/img/misc/Segment-Mixpanel.png">
-                  </div>
-                  <div class="tab-pane fade" id="tabs-icons-text-3" role="tabpanel"
-                    aria-labelledby="tabs-icons-text-3-tab">
-                    <img style="max-width: 100%" src="./assets/img/misc/Segment-Mailchimp.png">
+          <!-- integrations section -->
+          <div id="integrations">
+            <div class="row mt-4">
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel"
+                      aria-labelledby="tabs-icons-text-1-tab">
+                      <img style="max-width: 100%" src="./assets/img/misc/Segment-destination.png">
+                    </div>
+                    <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel"
+                      aria-labelledby="tabs-icons-text-2-tab">
+                      <img style="max-width: 100%" src="./assets/img/misc/Segment-Mixpanel.png">
+                    </div>
+                    <div class="tab-pane fade" id="tabs-icons-text-3" role="tabpanel"
+                      aria-labelledby="tabs-icons-text-3-tab">
+                      <img style="max-width: 100%" src="./assets/img/misc/Segment-Mailchimp.png">
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-12 col-12">
-          </div>
-          <div class="container">
-            <div class="row row-grid justify-content-center">
-              <div class="col-lg-8 text-center">
-                <a href="https://segment.com/catalog/" target="_blank"
-                  class="btn btn-outline-white text-success mt-4">Check out the 200+ Segment integrations</a>
+            <div class="col-md-12 col-12">
+            </div>
+            <div class="container">
+              <div class="row row-grid justify-content-center">
+                <div class="col-lg-8 text-center">
+                  <a href="https://segment.com/catalog/" target="_blank"
+                    class="btn btn-outline-white text-success mt-4">Check out the 200+ Segment integrations</a>
 
-                <!-- </section>
+                  <!-- </section>
 
     <section class="section bg-secondary" id="get-started-analytics">
       <div class="container">
@@ -290,36 +319,36 @@
         }
       }
 </code></pre> -->
-              </div>
-            </div>
-          </div>
-
-    </section>
-
-    <section class="section section-lg pt-0 shape-primary bg-white">
-      <!-- <div class="shape-primary"></div> -->
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="card gradient-bg border-0">
-              <div class="p-5">
-                <div class="row align-items-center">
-                  <div class="col-lg-6">
-                    <h1 class="text-white">Get started for free</h1>
-                    <p class="lead text-white mt-3">Add the SpotSense SDK to your mobile app</p>
-                  </div>
-                  <div class="col-lg-5 ml-lg-auto mt-0 text-white">
-                    <a id="get-started-button-bottom-of-page" href="signup.html"
-                      class="btn btn-lg btn-block btn-success"> Add to my iOS app</a>
-                  </div>
                 </div>
               </div>
             </div>
 
+      </section>
+
+      <section class="section section-lg pt-0 shape-primary bg-white">
+        <!-- <div class="shape-primary"></div> -->
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="card gradient-bg border-0">
+                <div class="p-5">
+                  <div class="row align-items-center">
+                    <div class="col-lg-6">
+                      <h1 class="text-white">Get started for free</h1>
+                      <p class="lead text-white mt-3">Add the SpotSense SDK to your mobile app</p>
+                    </div>
+                    <div class="col-lg-5 ml-lg-auto mt-0 text-white">
+                      <a id="get-started-button-bottom-of-page" href="signup.html"
+                        class="btn btn-lg btn-block btn-success"> Add to my iOS app</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
   </main>
 
   <footer class="footer">
@@ -439,7 +468,7 @@
     var link = document.getElementById('get-started-button');
     analytics.trackLink(link, 'Clicked on CTA', {
       location: 'Header',
-      color: 'Green',
+      color: 'Blue',
       text: 'Add to my iOS App',
       CTA: 'Add SDK',
       category: 'Home Page',
