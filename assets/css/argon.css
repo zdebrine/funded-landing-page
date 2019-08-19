@@ -5206,8 +5206,8 @@ input[type='button'].btn-block
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link
 {
-    color: #fff;
-    background-color: #008cff;
+    color: #008cff;
+    background-color: #fff;
 }
 
 .nav-fill .nav-item
@@ -13140,7 +13140,7 @@ button.section-secondary:focus
 
 .section-light
 {
-    background-color: #ced4da !important;
+    background-color: #f6f9fc !important;
 }
 
 a.section-light:hover,
@@ -13148,7 +13148,7 @@ a.section-light:focus,
 button.section-light:hover,
 button.section-light:focus
 {
-    background-color: #b1bbc4 !important;
+    background-color: #d0e0ef !important;
 }
 
 .section-dark
@@ -16058,7 +16058,6 @@ textarea[resize='horizontal']
 
     transition: all .15s ease; 
 
-    color: #008cff;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
 }
@@ -16070,8 +16069,8 @@ textarea[resize='horizontal']
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link
 {
-    color: #fff;
-    background-color: #008cff;
+    color: #008cff;
+    background-color: #fff;
 }
 
 @media (max-width: 575.98px)

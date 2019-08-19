@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Primary Meta Tags -->
+  <title>SpotSense - Geofencing for iOS</title>
+  <meta name="title" content="SpotSense - Geofencing for iOS">
+  <meta name="description" content="Location for mobile apps made simple.  Add a geofence in less than 5 minutes.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://spotsense.io/">
+  <meta property="og:title" content="SpotSense - Geofencing for iOS">
+  <meta property="og:description"
+    content="Location for mobile apps made simple.  Add a geofence in less than 5 minutes.">
+  <meta property="og:image" content="./assets/img/google-card.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://spotsense.io/">
+  <meta property="twitter:title" content="SpotSense - Geofencing for iOS">
+  <meta property="twitter:description"
+    content="Location for mobile apps made simple.  Add a geofence in less than 5 minutes.">
+  <meta property="twitter:image" content="./assets/img/google-card.png">
+
+  <!-- Favicon -->
+  <link href="./assets/img/brand/favicon.png" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="./assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+  <!-- <link href="./assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./assets/css/background.css">
+
+  <!-- Argon CSS -->
+  <link type="text/css" href="./assets/css/argon.css?v=1.0.1" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/prism.css">
+
+  <!-- Code Syntax Highlighting -->
+  <link rel="stylesheet" href="./assets/js/highlight/styles/obsidian.css">
+  <script src="./assets/js/highlight/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+</head>
+
+<body>
+  <header class="header-global">
+    <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light">
+      <div class="container">
+        <a class="navbar-brand mr-lg-5" href="./index.html">
+          <img src="./assets/img/brand/spotsense-white-slim.png">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global"
+          aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbar_global">
+          <div class="navbar-collapse-header">
+            <div class="row">
+              <div class="col-6 collapse-brand">
+                <a href="./index.html">
+                  <img src="./assets/img/brand/spotsense-color-slim.png">
+                </a>
+              </div>
+              <div class="col-6 collapse-close">
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global"
+                  aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                  <span></span>
+                  <span></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
+                <i class="ni ni-ui-04 d-lg-none"></i>
+                <span class="nav-link-inner--text">Solutions</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-xl">
+                <div class="dropdown-menu-inner">
+                  <a href="geofencing.html" class="media d-flex align-items-center">
+                    <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
+                      <i class="ni ni-square-pin"></i>
+                    </div>
+                    <div class="media-body ml-3">
+                      <h6 class="heading text-primary mb-md-1">Geofencing (Beta)</h6>
+                      <p class="description d-none d-md-inline-block mb-0">Create location based campaigns with
+                        SpotSense geofencing.
+                      </p>
+                    </div>
+                  </a>
+                  <a href="beacons.html" class="media d-flex align-items-center">
+                    <div class="icon icon-shape bg-gradient-success rounded-circle text-white">
+                      <i class="ni ni-pin-3"></i>
+                    </div>
+                    <div class="media-body ml-3">
+                      <h6 class="heading text-success mb-md-1">Beacons (Beta)</h6>
+                      <p class="description d-none d-md-inline-block mb-0">Learn how to connect Eddystone beacons to
+                        SpotSense and build close range proximity interactions.</p>
+                    </div>
+                  </a>
+                  <a href="integrations.html" class="media d-flex align-items-center">
+                    <div class="icon icon-shape bg-gradient-warning rounded-circle text-white">
+                      <i class="ni ni-ui-04"></i>
+                    </div>
+                    <div class="media-body ml-3">
+                      <h5 class="heading text-warning mb-md-1">Integrations</h5>
+                      <p class="description d-none d-md-inline-block mb-0">Send user location data to over 200
+                        destinations you're already using with the Segment integration.</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
+                <i class="ni ni-collection d-lg-none"></i>
+                <span class="nav-link-inner--text">Documentation</span>
+              </a>
+              <div class="dropdown-menu">
+                <a href="signup.html" class="dropdown-item">Coming soon</a>
+
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link" href="#" role="button">
+                <i class="ni ni-collection d-lg-none"></i>
+                <span class="nav-link-inner--text text-white">About</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+
+            <!--<ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+                 <li class="nav-item">
+                  <a href="http://docs.spotsense.io" class="nav-link" href="http://docs.spotsense.io" role="button">
+                    <i class="ni ni-collection d-lg-none"></i>
+                    <span class="nav-link-inner--text font-weight-bold">Docs</span>
+                  </a>
+                </li> 
+                <li class="nav-item">
+                  <a href="pricing.html" class="nav-link" href="#" role="button">
+                    <i class="ni ni-collection d-lg-none"></i>
+                    <span class="nav-link-inner--text font-weight-bold text-default">Pricing</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="about.html" class="nav-link" href="#" role="button">
+                    <i class="ni ni-collection d-lg-none"></i>
+                    <span class="nav-link-inner--text font-weight-bold text-default">About</span>
+                  </a>
+                </li>
+              </ul>-->
+            <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+              <!--<li class="nav-item">
+                  <a id="header-github-icon" class="nav-link nav-link-icon" href="https://github.com/spotsenseio" target="_blank" data-toggle="tooltip" title="Star us on Github">
+                    <i class="fab fa-github"></i>
+                    <span class="nav-link-inner--text d-lg-none">Github</span>
+                  </a>
+                </li>-->
+              <li class="nav-item d-none d-lg-block ml-lg-4">
+                <a id="header-dashboard-button" href="signup.html" class="btn btn-neutral btn-icon">
+                  <span class="btn-inner--icon">
+                    <i class="fas fa-chart-line"></i>
+                  </span>
+                  <span class="nav-link-inner--text">Dashboard</span>
+                </a>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Begin Main -->
+  <main>
+    <div class="position-relative">
+
+      <section class="section section-lg bg-gradient-success section-hero section-shaped">
+        <!-- Background -->
+        <div class="shape shape-style-1 shape-primary"></div>
+
+        <div class="container shape-container d-flex align-items-center" style="padding-top: 60px">
+          <div class="row justify-content-between align-items-center">
+          </div>
+          <div class="col-lg-6 mb-lg-auto d-none d-lg-block">
+            <img style="max-width: 100%" src="./assets/img/misc/beacon.png">
+          </div>
+          <div class="col-lg-6 mb-5 ml-4">
+            <h1 class="display-2 text-white">A simple way to manage your Bluetooth Beacons</h1>
+            <p class="lead text-white mt-4">
+              The time has come to bring the real world online. Add your Eddystone beacons to SpotSense in minutes and
+              start building experiences that connect your app users to the physical world.
+              <br><br>
+            </p>
+            <div class="btn-wrapper mt-5">
+              <a id="get-started-button" href="signup.html" class="btn btn-lg btn-primary text-white">
+                <span class="btn-inner--text">Join the beta</span>
+              </a>
+              <a id="buy-beacons-button" href="https://shop.ruuvi.com/" target="_blank" class="btn btn-lg btn-white">
+                <span class="btn-inner--text">Buy beacons</span>
+              </a>
+
+            </div>
+          </div>
+        </div>
+        <div class="separator separator-bottom separator-skew zindex-100">
+          <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1"
+            xmlns="http://www.w3.org/2000/svg">
+            <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+          </svg>
+        </div>
+        <main>
+      </section>
+      <section class="section section-lg bg-gradient-white">
+        <div class="container">
+          <div class="row justify-content-center text-center mb-lg">
+            <div class="col-lg-8">
+              <h2 class="display-2">A beacon platform that works with your current tech stack</h2>
+              <p class="lead text-muted">SpotSense lets you
+                easily manage, configure and deploy Eddystone beacons. Send data to over 200 destinations when user's
+                phones detect the Bluetooth signal.</p>
+            </div>
+          </div>
+          <div class="row row-grid align-items-center">
+            <div class="col-md-12 order-lg-2 ml-lg-auto mt-1">
+              <div class="position-relative pl-md-12 mb-10">
+                <img style="max-width: 100%" src="./assets/img/misc/Beacon-dash.png">
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+    <!-- SVG separator -->
+    </div>
+    </section>
+    <section class="section section-lg pt-20 shape-primary bg-default">
+      <!-- <div class="shape-primary"></div> -->
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="row align-items-center">
+              <div class="col-lg-5">
+                <p class="text-white">Beta</p>
+                <h1 class="display-2 text-white">Make objects part of your user experience</h1>
+                <p class="text-white mb-4">Bluetooth beacons can be placed anywhere to intantly bring objects online.
+                  When a user interacts with an object, you can trigger features in your app. You can finally join your
+                  mobile app with the real world.</p>
+                <a href="./signup.html" class="mr-2 btn btn-lg btn-success text-white">Join the beta</a>
+                <br>
+                <br>
+                <br>
+                <br>
+              </div>
+              <div class="col-lg-7 text-right">
+                <img style="max-width: 150%" src="./assets/img/misc/beacon-plant.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+    </section>
+    <section class="section section-lg pt-20 shape-primary bg-white">
+      <!-- <div class="shape-primary"></div> -->
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="card bg-gradient-success border-0">
+              <div class="p-5">
+                <div class="row align-items-center">
+                  <div class="col-lg-6">
+                    <h1 class="text-white">Get started now</h1>
+                    <p class="lead text-white mt-3">Add the SpotSense SDK to your mobile app</p>
+                  </div>
+                  <div class="col-lg-5 ml-lg-auto mt-0 text-white">
+                    <a id="get-started-button-bottom-of-page" href="signup.html"
+                      class="btn btn-lg btn-block btn-white">Join the beta</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <!-- Footer -->
+    <div class="container">
+      <div class="row align-items-center justify-content-md-between">
+        <div class="col-md-4">
+          <div class="copyright">
+            &copy; 2019
+            <a href="https://spotsense.io" target="_blank">SpotSense</a>.
+          </div>
+        </div>
+        <div class="col-md-5">
+          <ul class="nav nav-footer justify-content-end">
+            <li class="nav-item">
+              <!-- TODO: make this a modal window  -->
+              <!-- <a id="footer-careers" href="" class="nav-link" target="_blank">Careers</a> -->
+            </li>
+            <li class="nav-item">
+              <a id="footer-about" href="./about.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a id="footer-blog" href="https://medium.com/spotsense" class="nav-link" target="_blank">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a id="footer-demo" href="./demo.html" class="nav-link">Demo</a>
+            </li>
+            <li class="nav-item">
+              <!-- <a id="footer-privacypolicy" href="https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md" class="nav-link" target="_blank">Privacy Policy</a> -->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core -->
+  <script src="./assets/vendor/jquery/jquery.min.js"></script>
+  <script src="./assets/vendor/popper/popper.min.js"></script>
+  <script src="./assets/vendor/bootstrap/bootstrap.min.js"></script>
+  <script src="./assets/vendor/headroom/headroom.min.js"></script>
+  <!-- Optional JS -->
+  <script src="./assets/vendor/onscreen/onscreen.min.js"></script>
+  <script src="./assets/vendor/nouislider/js/nouislider.min.js"></script>
+  <script src="./assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+  <!-- Argon JS -->
+  <script src="./assets/js/argon.js?v=1.0.1"></script>
+  <script src="./assets/js/analytic-display.js"></script>
+
+  <!-- Chart JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script src="./assets/js/generatedata.js"></script>
+  <script>
+    // Draw the pie chart
+    var arr = getLocationPermissionData();
+    var ctx = document.getElementById("locationPermissions");
+    var myLineChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: arr[0],
+        datasets: [{
+          label: "Status",
+          backgroundColor: ["#2dce89", "#11cdef", "#f5365c"],
+          data: arr[1]
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "All Users: Location Enabled?"
+        }
+      }
+    });
+  </script>
+
+  <script>
+    var arr = getTimeSeries_7d();
+    var ctx = document.getElementById("getTimeSeries_7d");
+    var myLineChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: arr[0],
+        datasets: [{
+          data: arr[1],
+          label: "Visitors",
+          borderColor: "#2dce89",
+          fill: false
+        }
+        ]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "Number of Visitors This Week"
+        }
+      }
+    });
+  </script>
+
+  <!-- Segment 
+  <script>
+    !function () {
+      var analytics = window.analytics = window.analytics || []; if (!analytics.initialize) if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice."); else {
+        analytics.invoked = !0; analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on"]; analytics.factory = function (t) { return function () { var e = Array.prototype.slice.call(arguments); e.unshift(t); analytics.push(e); return analytics } }; for (var t = 0; t < analytics.methods.length; t++) { var e = analytics.methods[t]; analytics[e] = analytics.factory(e) } analytics.load = function (t, e) { var n = document.createElement("script"); n.type = "text/javascript"; n.async = !0; n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js"; var a = document.getElementsByTagName("script")[0]; a.parentNode.insertBefore(n, a); analytics._loadOptions = e }; analytics.SNIPPET_VERSION = "4.1.0";
+        analytics.load("PwkPskGZW3B5aRgb5xFwCSKrw8wovZa4");
+        analytics.page("Home");
+      }
+    }();
+  </script>
+
+  <script src="./assets/js/analytics.js"></script>
+
+  <script type="text/javascript">
+    var link = document.getElementById('get-started-button');
+    analytics.trackLink(link, 'Clicked on CTA', {
+      location: 'Header',
+      color: 'Blue',
+      text: 'Add to my iOS App',
+      CTA: 'Add SDK',
+      category: 'Home Page',
+      type: 'Button',
+      pageTitle: document.title
+    });
+  </script>
+
+  <script type="text/javascript">
+    var link = document.getElementById('get-started-button-bottom-of-page');
+    analytics.trackLink(link, 'Clicked on CTA', {
+      location: 'Bottom of page',
+      color: 'Green',
+      text: 'Add to my iOS App',
+      CTA: 'Add SDK',
+      category: 'Home Page',
+      type: 'Button',
+      pageTitle: document.title
+    });
+  </script>-->
+</body>
+
+</html>
