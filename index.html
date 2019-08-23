@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Primary Meta Tags -->
-  <title>SpotSense - Geofencing for iOS</title>
+  <title>Proximity SDK|SpotSense</title>
   <meta name="title" content="SpotSense - Geofencing for iOS">
   <meta name="description" content="Location for mobile apps made simple.  Add a geofence in less than 5 minutes.">
 
@@ -265,7 +265,8 @@
                             physical world. When one of your app users enters the location of the geofence, you can use
                             that event to create marketing campaigns, trigger a new feature in your app, or simply log
                             the visit to see how often your users go to that location.</h5>
-                          <a href="./geofencing.html" class="btn btn-white text-success mt-4">Explore geofencing</a>
+                          <a id="geofencing-button" href="./geofencing.html"
+                            class="btn btn-white text-success mt-4">Explore geofencing</a>
                         </div>
                       </div>
                       <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel"
@@ -278,7 +279,8 @@
                             the visit to see how often your users go to that location. Beacons are usually used inside
                             where GPS signals can't reach.
                           </h5>
-                          <a href="./beacons.html" class="btn btn-white text-success mt-4">Explore beacons</a>
+                          <a id="beacon-button" href="./beacons.html" class="btn btn-white text-success mt-4">Explore
+                            beacons</a>
                         </div>
                       </div>
                     </div>
@@ -324,7 +326,8 @@
               <div class="container">
                 <div class="row row-grid justify-content-center">
                   <div class="col-lg-8 text-center">
-                    <a href="./integrations.html" class="btn btn-white text-success mt-4">Explore use cases</a>
+                    <a id="use-cases-button" href="./integrations.html" class="btn btn-white text-success mt-4">Explore
+                      use cases</a>
 
         </section>
         <section class="section px-lg-5 bg-default">
@@ -348,7 +351,7 @@
               <div class="container">
                 <div class="row row-grid justify-content-center">
                   <div class="col-lg-8 text-center">
-                    <a href="./demo.html" class="btn btn-white mt-4">Watch the Demo</a>
+                    <a id="demo-button" href="./demo.html" class="btn btn-white mt-4">Watch the Demo</a>
                   </div>
 
                   <div id="Soultions-examples">
@@ -449,56 +452,6 @@
       <script src="./assets/js/argon.js?v=1.0.1"></script>
       <script src="./assets/js/analytic-display.js"></script>
 
-      <!-- Chart JS -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-      <script src="./assets/js/generatedata.js"></script>
-      <script>
-        // Draw the pie chart
-        var arr = getLocationPermissionData();
-        var ctx = document.getElementById("locationPermissions");
-        var myLineChart = new Chart(ctx, {
-          type: 'pie',
-          data: {
-            labels: arr[0],
-            datasets: [{
-              label: "Status",
-              backgroundColor: ["#2dce89", "#11cdef", "#f5365c"],
-              data: arr[1]
-            }]
-          },
-          options: {
-            title: {
-              display: true,
-              text: "All Users: Location Enabled?"
-            }
-          }
-        });
-      </script>
-
-      <script>
-        var arr = getTimeSeries_7d();
-        var ctx = document.getElementById("getTimeSeries_7d");
-        var myLineChart = new Chart(ctx, {
-          type: 'line',
-          data: {
-            labels: arr[0],
-            datasets: [{
-              data: arr[1],
-              label: "Visitors",
-              borderColor: "#2dce89",
-              fill: false
-            }
-            ]
-          },
-          options: {
-            title: {
-              display: true,
-              text: "Number of Visitors This Week"
-            }
-          }
-        });
-      </script>
-
       <!-- Segment -->
       <script>
         !function () {
@@ -516,9 +469,61 @@
         var link = document.getElementById('get-started-button');
         analytics.trackLink(link, 'Clicked on CTA', {
           location: 'Header',
-          color: 'Blue',
-          text: 'Add to my iOS App',
-          CTA: 'Add SDK',
+          color: 'White',
+          text: 'Join the iOS beta',
+          CTA: 'Join Beta',
+          category: 'Home Page',
+          type: 'Button',
+          pageTitle: document.title
+        });
+      </script>
+
+      <script type="text/javascript">
+        var link = document.getElementById('geofencing-button');
+        analytics.trackLink(link, 'Clicked on CTA', {
+          location: 'Proximity SDK section',
+          color: 'White',
+          text: 'Explore geofences',
+          CTA: 'Geofencing',
+          category: 'Home Page',
+          type: 'Button',
+          pageTitle: document.title
+        });
+      </script>
+
+      <script type="text/javascript">
+        var link = document.getElementById('beacon-button');
+        analytics.trackLink(link, 'Clicked on CTA', {
+          location: 'Proximity SDK section',
+          color: 'White',
+          text: 'Explore beacons',
+          CTA: 'Beacons',
+          category: 'Home Page',
+          type: 'Button',
+          pageTitle: document.title
+        });
+      </script>
+
+      <script type="text/javascript">
+        var link = document.getElementById('use-cases-button');
+        analytics.trackLink(link, 'Clicked on CTA', {
+          location: 'Integrations section',
+          color: 'White',
+          text: 'Explore use cases',
+          CTA: 'Use cases',
+          category: 'Home Page',
+          type: 'Button',
+          pageTitle: document.title
+        });
+      </script>
+
+      <script type="text/javascript">
+        var link = document.getElementById('demo-button');
+        analytics.trackLink(link, 'Clicked on CTA', {
+          location: 'Dashboard section',
+          color: 'White',
+          text: 'Watch the demo',
+          CTA: 'Watch Demo',
           category: 'Home Page',
           type: 'Button',
           pageTitle: document.title
@@ -530,8 +535,8 @@
         analytics.trackLink(link, 'Clicked on CTA', {
           location: 'Bottom of page',
           color: 'Green',
-          text: 'Add to my iOS App',
-          CTA: 'Add SDK',
+          text: 'Join the Beta',
+          CTA: 'Join Beta',
           category: 'Home Page',
           type: 'Button',
           pageTitle: document.title

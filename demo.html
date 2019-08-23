@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Primary Meta Tags -->
-  <title>SpotSense - Demo</title>
+  <title>Demo|SpotSense</title>
   <meta name="title" content="SpotSense - Demo">
   <meta name="description" content="Location for mobile apps made simple.  Add a geofence in less than 5 minutes.">
 
@@ -128,33 +128,9 @@
           </ul>
           <ul class="navbar-nav align-items-lg-center ml-lg-auto">
 
-            <!--<ul class="navbar-nav navbar-nav-hover align-items-lg-center">
-                 <li class="nav-item">
-                  <a href="http://docs.spotsense.io" class="nav-link" href="http://docs.spotsense.io" role="button">
-                    <i class="ni ni-collection d-lg-none"></i>
-                    <span class="nav-link-inner--text font-weight-bold">Docs</span>
-                  </a>
-                </li> 
-                <li class="nav-item">
-                  <a href="pricing.html" class="nav-link" href="#" role="button">
-                    <i class="ni ni-collection d-lg-none"></i>
-                    <span class="nav-link-inner--text font-weight-bold text-default">Pricing</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="about.html" class="nav-link" href="#" role="button">
-                    <i class="ni ni-collection d-lg-none"></i>
-                    <span class="nav-link-inner--text font-weight-bold text-default">About</span>
-                  </a>
-                </li>
-              </ul>-->
+
             <ul class="navbar-nav align-items-lg-center ml-lg-auto">
-              <!--<li class="nav-item">
-                  <a id="header-github-icon" class="nav-link nav-link-icon" href="https://github.com/spotsenseio" target="_blank" data-toggle="tooltip" title="Star us on Github">
-                    <i class="fab fa-github"></i>
-                    <span class="nav-link-inner--text d-lg-none">Github</span>
-                  </a>
-                </li>-->
+
               <li class="nav-item d-none d-lg-block ml-lg-4">
                 <a id="header-dashboard-button" href="signup.html" class="btn btn-neutral btn-icon">
                   <span class="btn-inner--icon">
@@ -300,11 +276,8 @@
         <div class="col-md-4">
           <div class="copyright">
             &copy; 2019
-            <a href="https://spotsense.io" target="_blank">SpotSense (Sonora Data, LLC)</a>.
+            <a href="https://spotsense.io" target="_blank">SpotSense</a>.
           </div>
-        </div>
-        <div class="col-md-3 text-center">
-          <small class="font-weight-bold">Made with <span class="text-warning">❤</span> in Phoenix</small>
         </div>
         <div class="col-md-5">
           <ul class="nav nav-footer justify-content-end">
@@ -333,6 +306,19 @@
   <script src="./assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
   <!-- Argon JS -->
   <script src="./assets/js/argon.js?v=1.0.1"></script>
+
+  <!--Segment-->
+  <script>
+    !function () {
+      var analytics = window.analytics = window.analytics || []; if (!analytics.initialize) if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice."); else {
+        analytics.invoked = !0; analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on"]; analytics.factory = function (t) { return function () { var e = Array.prototype.slice.call(arguments); e.unshift(t); analytics.push(e); return analytics } }; for (var t = 0; t < analytics.methods.length; t++) { var e = analytics.methods[t]; analytics[e] = analytics.factory(e) } analytics.load = function (t, e) { var n = document.createElement("script"); n.type = "text/javascript"; n.async = !0; n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js"; var a = document.getElementsByTagName("script")[0]; a.parentNode.insertBefore(n, a); analytics._loadOptions = e }; analytics.SNIPPET_VERSION = "4.1.0";
+        analytics.load("PwkPskGZW3B5aRgb5xFwCSKrw8wovZa4");
+        analytics.page("Demo");
+      }
+    }();
+  </script>
+  <script src="./assets/js/analytics.js"></script>
+
 
 
 </body>

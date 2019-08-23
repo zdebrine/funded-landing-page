@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Primary Meta Tags -->
-  <title>SpotSense - Geofencing for iOS</title>
+  <title>Integrations|Proximity SDK|SpotSense</title>
   <meta name="title" content="SpotSense - Geofencing for iOS">
   <meta name="description" content="Location for mobile apps made simple.  Add a geofence in less than 5 minutes.">
 
@@ -138,33 +138,8 @@
             </li>
           </ul>
           <ul class="navbar-nav align-items-lg-center ml-lg-auto">
-            <!--<ul class="navbar-nav navbar-nav-hover align-items-lg-center">
-             <li class="nav-item">
-              <a href="http://docs.spotsense.io" class="nav-link" href="http://docs.spotsense.io" role="button">
-                <i class="ni ni-collection d-lg-none"></i>
-                <span class="nav-link-inner--text font-weight-bold">Docs</span>
-              </a>
-            </li> 
-            <li class="nav-item">
-              <a href="pricing.html" class="nav-link" href="#" role="button">
-                <i class="ni ni-collection d-lg-none"></i>
-                <span class="nav-link-inner--text font-weight-bold text-default">Pricing</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="about.html" class="nav-link" href="#" role="button">
-                <i class="ni ni-collection d-lg-none"></i>
-                <span class="nav-link-inner--text font-weight-bold text-default">About</span>
-              </a>
-            </li>
-          </ul>-->
             <ul class="navbar-nav align-items-lg-center ml-lg-auto">
-              <!--<li class="nav-item">
-              <a id="header-github-icon" class="nav-link nav-link-icon" href="https://github.com/spotsenseio" target="_blank" data-toggle="tooltip" title="Star us on Github">
-                <i class="fab fa-github"></i>
-                <span class="nav-link-inner--text d-lg-none">Github</span>
-              </a>
-            </li>-->
+
               <li class="nav-item d-none d-lg-block ml-lg-4">
                 <a id="header-dashboard-button" href="signup.html" class="btn btn-neutral btn-icon">
                   <span class="btn-inner--icon">
@@ -200,7 +175,7 @@
               Analytics and Hubspot so you can incorporate real world locations into your tech stack.
             </p>
             <div class="btn-wrapper mt-5">
-              <a id="get-started-button" href="#use-cases-subheader" class="btn btn-lg btn-success text-white">
+              <a id="use-cases-button" href="#use-cases-subheader" class="btn btn-lg btn-success text-white">
                 <span class="btn-inner--text">Explore use cases</span>
               </a>
               <a id="segment-integrations-button" href="https://segment.com/catalog/" target="_blank"
@@ -321,25 +296,6 @@
 
       </section>
 
-      <!--<section class="section bg-secondary" id="get-started-analytics">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h2 class="mb-4 text-left">Location Features, Faster</h2>
-            <p>You and your team deserve to have tools that help solve real world problems as quickly as possible.</p>
-            <p><strong>We eliminate complex location infrastructure, so you can start building location-based
-                experiences for your app users in just a couple of minutes.</strong></p>
-          </div>
-          <div class="mt-3 col-md-6">
-            <!-- <div id ="code-container"></div> 
-            <pre><code style="padding: 25px; float: right; max-width: 100%; overflow-x: scroll;" id="code-analytics" class="swift"> func didInteractWithGeofence(event: String) {
-      if (event == "lax-enter") {
-          print("Welcome to LAX!")
-      } else if (event == "lax-exit") {
-          print("Thanks for visiting LAX!")
-        }
-      }
-</code></pre> -->
     </div>
     </div>
     </div>
@@ -359,7 +315,7 @@
                     <p class="lead text-white mt-3">Add the SpotSense SDK to your mobile app</p>
                   </div>
                   <div class="col-lg-5 ml-lg-auto mt-0 text-white">
-                    <a id="get-started-button-bottom-of-page" href="signup.html"
+                    <a id="get-started-button-bottom-of-page-integrations" href="signup.html"
                       class="btn btn-lg btn-block btn-success"> Join the beta</a>
                   </div>
                 </div>
@@ -469,13 +425,13 @@
     });
   </script>
 
-  <!-- Segment 
+  <!--Segment-->
   <script>
     !function () {
       var analytics = window.analytics = window.analytics || []; if (!analytics.initialize) if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice."); else {
         analytics.invoked = !0; analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on"]; analytics.factory = function (t) { return function () { var e = Array.prototype.slice.call(arguments); e.unshift(t); analytics.push(e); return analytics } }; for (var t = 0; t < analytics.methods.length; t++) { var e = analytics.methods[t]; analytics[e] = analytics.factory(e) } analytics.load = function (t, e) { var n = document.createElement("script"); n.type = "text/javascript"; n.async = !0; n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js"; var a = document.getElementsByTagName("script")[0]; a.parentNode.insertBefore(n, a); analytics._loadOptions = e }; analytics.SNIPPET_VERSION = "4.1.0";
         analytics.load("PwkPskGZW3B5aRgb5xFwCSKrw8wovZa4");
-        analytics.page("Home");
+        analytics.page("Integrations");
       }
     }();
   </script>
@@ -483,30 +439,43 @@
   <script src="./assets/js/analytics.js"></script>
 
   <script type="text/javascript">
-    var link = document.getElementById('get-started-button');
+    var link = document.getElementById('use-cases-button');
     analytics.trackLink(link, 'Clicked on CTA', {
       location: 'Header',
-      color: 'Blue',
-      text: 'Add to my iOS App',
-      CTA: 'Add SDK',
-      category: 'Home Page',
+      color: 'Green',
+      text: 'Explore use cases',
+      CTA: 'Use cases',
+      category: 'Integrations Page',
       type: 'Button',
       pageTitle: document.title
     });
   </script>
 
   <script type="text/javascript">
-    var link = document.getElementById('get-started-button-bottom-of-page');
+    var link = document.getElementById('segment-integrations-button');
     analytics.trackLink(link, 'Clicked on CTA', {
-      location: 'Bottom of page',
-      color: 'Green',
-      text: 'Add to my iOS App',
-      CTA: 'Add SDK',
-      category: 'Home Page',
+      location: 'Header',
+      color: 'White',
+      text: 'See all integrations',
+      CTA: 'Segment integrations',
+      category: 'Integrations Page',
       type: 'Button',
       pageTitle: document.title
     });
-  </script>-->
+  </script>
+
+  <script type="text/javascript">
+    var link = document.getElementById('get-started-button-bottom-of-page-integrations');
+    analytics.trackLink(link, 'Clicked on CTA', {
+      location: 'Bottom of page',
+      color: 'Green',
+      text: 'Join the beta',
+      CTA: 'Join Beta',
+      category: 'Integrations Page',
+      type: 'Button',
+      pageTitle: document.title
+    });
+  </script>
 </body>
 
 </html>

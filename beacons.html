@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Primary Meta Tags -->
-  <title>SpotSense - Geofencing for iOS</title>
+  <title>BLE Beacons|Proximity SDK|SpotSense</title>
   <meta name="title" content="SpotSense - Geofencing for iOS">
   <meta name="description" content="Location for mobile apps made simple.  Add a geofence in less than 5 minutes.">
 
@@ -202,7 +202,7 @@
               <br><br>
             </p>
             <div class="btn-wrapper mt-5">
-              <a id="get-started-button" href="signup.html" class="btn btn-lg btn-primary text-white">
+              <a id="get-started-button-beacon" href="signup.html" class="btn btn-lg btn-primary text-white">
                 <span class="btn-inner--text">Join the beta</span>
               </a>
               <a id="buy-beacons-button" href="https://shop.ruuvi.com/" target="_blank" class="btn btn-lg btn-white">
@@ -255,7 +255,8 @@
                 <p class="text-white mb-4">Bluetooth beacons can be placed anywhere to intantly bring objects online.
                   When a user interacts with an object, you can trigger features in your app. You can finally join your
                   mobile app with the real world.</p>
-                <a href="./signup.html" class="mr-2 btn btn-lg btn-success text-white">Join the beta</a>
+                <a id="get-started-button-mid-page" href="./signup.html"
+                  class="mr-2 btn btn-lg btn-success text-white">Join the beta</a>
                 <br>
                 <br>
                 <br>
@@ -284,7 +285,7 @@
                     <p class="lead text-white mt-3">Add the SpotSense SDK to your mobile app</p>
                   </div>
                   <div class="col-lg-5 ml-lg-auto mt-0 text-white">
-                    <a id="get-started-button-bottom-of-page" href="signup.html"
+                    <a id="get-started-button-bottom-of-page-beacon" href="signup.html"
                       class="btn btn-lg btn-block btn-white">Join the beta</a>
                   </div>
                 </div>
@@ -344,63 +345,14 @@
   <script src="./assets/js/argon.js?v=1.0.1"></script>
   <script src="./assets/js/analytic-display.js"></script>
 
-  <!-- Chart JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-  <script src="./assets/js/generatedata.js"></script>
-  <script>
-    // Draw the pie chart
-    var arr = getLocationPermissionData();
-    var ctx = document.getElementById("locationPermissions");
-    var myLineChart = new Chart(ctx, {
-      type: 'pie',
-      data: {
-        labels: arr[0],
-        datasets: [{
-          label: "Status",
-          backgroundColor: ["#2dce89", "#11cdef", "#f5365c"],
-          data: arr[1]
-        }]
-      },
-      options: {
-        title: {
-          display: true,
-          text: "All Users: Location Enabled?"
-        }
-      }
-    });
-  </script>
 
-  <script>
-    var arr = getTimeSeries_7d();
-    var ctx = document.getElementById("getTimeSeries_7d");
-    var myLineChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: arr[0],
-        datasets: [{
-          data: arr[1],
-          label: "Visitors",
-          borderColor: "#2dce89",
-          fill: false
-        }
-        ]
-      },
-      options: {
-        title: {
-          display: true,
-          text: "Number of Visitors This Week"
-        }
-      }
-    });
-  </script>
-
-  <!-- Segment 
+  <!--Segment-->
   <script>
     !function () {
       var analytics = window.analytics = window.analytics || []; if (!analytics.initialize) if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice."); else {
         analytics.invoked = !0; analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on"]; analytics.factory = function (t) { return function () { var e = Array.prototype.slice.call(arguments); e.unshift(t); analytics.push(e); return analytics } }; for (var t = 0; t < analytics.methods.length; t++) { var e = analytics.methods[t]; analytics[e] = analytics.factory(e) } analytics.load = function (t, e) { var n = document.createElement("script"); n.type = "text/javascript"; n.async = !0; n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js"; var a = document.getElementsByTagName("script")[0]; a.parentNode.insertBefore(n, a); analytics._loadOptions = e }; analytics.SNIPPET_VERSION = "4.1.0";
         analytics.load("PwkPskGZW3B5aRgb5xFwCSKrw8wovZa4");
-        analytics.page("Home");
+        analytics.page("Beacons");
       }
     }();
   </script>
@@ -408,30 +360,57 @@
   <script src="./assets/js/analytics.js"></script>
 
   <script type="text/javascript">
-    var link = document.getElementById('get-started-button');
+    var link = document.getElementById('get-started-button-beacon');
     analytics.trackLink(link, 'Clicked on CTA', {
       location: 'Header',
       color: 'Blue',
-      text: 'Add to my iOS App',
-      CTA: 'Add SDK',
-      category: 'Home Page',
+      text: 'Join the beta',
+      CTA: 'Join Beta',
+      category: 'Beacon Page',
       type: 'Button',
       pageTitle: document.title
     });
   </script>
 
   <script type="text/javascript">
-    var link = document.getElementById('get-started-button-bottom-of-page');
+    var link = document.getElementById('buy-beacons-button');
     analytics.trackLink(link, 'Clicked on CTA', {
-      location: 'Bottom of page',
-      color: 'Green',
-      text: 'Add to my iOS App',
-      CTA: 'Add SDK',
-      category: 'Home Page',
+      location: 'Header',
+      color: 'White',
+      text: 'Buy Beacons',
+      CTA: 'Ruuvi Beacons',
+      category: 'Beacon Page',
       type: 'Button',
       pageTitle: document.title
     });
-  </script>-->
+  </script>
+
+  <script type="text/javascript">
+    var link = document.getElementById('get-started-button-mid-page');
+    analytics.trackLink(link, 'Clicked on CTA', {
+      location: 'Beta section',
+      color: 'Green',
+      text: 'Join the beta',
+      CTA: 'Join Beta',
+      category: 'Beacon Page',
+      type: 'Button',
+      pageTitle: document.title
+    });
+  </script>
+
+  <script type="text/javascript">
+    var link = document.getElementById('get-started-button-bottom-of-page-beacon');
+    analytics.trackLink(link, 'Clicked on CTA', {
+      location: 'Bottom of page',
+      color: 'White',
+      text: 'Join the beta',
+      CTA: 'Join Beta',
+      category: 'Beacon Page',
+      type: 'Button',
+      pageTitle: document.title
+    });
+  </script>
+
 </body>
 
 </html>
