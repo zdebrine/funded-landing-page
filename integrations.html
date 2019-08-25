@@ -169,10 +169,11 @@
           <div class="col-lg-6 mb-5 ml-4">
             <h1 class="display-2 text-white">Supercharge the tools you already use with location data</h1>
             <p class="lead text-white mt-4">
-              There are SO many different platforms out there that help you engage with users.
-              Connecting SpotSense to Segment lets you send location events from your beacons and geofences to over 200
+              There are SO many different platforms out there that help you engage, follow up, and understand your
+              users.
+              Connecting SpotSense to Segment lets integrate location data into over 200
               services like Google
-              Analytics and Hubspot so you can incorporate real world locations into your tech stack.
+              Analytics and Hubspot.
             </p>
             <div class="btn-wrapper mt-5">
               <a id="use-cases-button" href="#use-cases-subheader" class="btn btn-lg btn-success text-white">
@@ -180,7 +181,7 @@
               </a>
               <a id="segment-integrations-button" href="https://segment.com/catalog/" target="_blank"
                 class="btn btn-lg btn-white">
-                <span class="btn-inner--text">See all integrations</span>
+                <span class="btn-inner--text">All integrations</span>
               </a>
             </div>
           </div>
@@ -217,9 +218,14 @@
                 person.</h5>
             </div>
             <div class="row row-grid align-items-center">
-              <div class="col-md-12 order-lg-2 ml-lg-auto mt-5">
+              <div class="col-md-12 order-lg-2 ml-lg-auto mt-5 d-none d-lg-block">
                 <div class="position-relative pl-md-12 mb-10">
                   <img style="max-width: 100%" src="./assets/img/misc/Segment-Intercom.png">
+                </div>
+              </div>
+              <div class="col-md-12 order-lg-2 ml-lg-auto mt-5 d-block d-lg-none">
+                <div class="position-relative pl-md-12 mb-10 text-center">
+                  <img style="max-width: 65%" src="./assets/img/misc/intercom-mobile.png">
                 </div>
               </div>
             </div>
@@ -245,9 +251,14 @@
           </div>
 
           <div class="row row-grid align-items-center">
-            <div class="col-md-12 order-lg-2 ml-lg-auto mt-5">
+            <div class="col-md-12 order-lg-2 ml-lg-auto mt-5 d-none d-lg-block">
               <div class="position-relative pl-md-12 mb-10">
                 <img style="max-width: 100%" src="./assets/img/misc/buildings.png">
+              </div>
+            </div>
+            <div class="col-md-12 order-lg-2 ml-lg-auto mt-5 d-block d-lg-none">
+              <div class="position-relative pl-md-12 mb-10">
+                <img style="max-width: 100%" src="./assets/img/misc/competition-mobile.png">
               </div>
             </div>
           </div>
@@ -270,10 +281,10 @@
           <div class="row">
             <div class="col-md-10 col-12">
               <h5 class="text-left text-white">We've all heard of the person who views the item in store just to buy it
-                online. Now you can quantify the effect that has. By using SpotSense to manage your Bluetooth beacons,
-                and sending that data to a tool like Amplitude, you can tie real world interactions into your mobile app
+                online. Quantify the effect that has by sending Bluetooth beacon data
+                to Amplitude and creating a Pathfinder chart. Now you can tie real world interactions with products into
+                your mobile app
                 metrics.
-                Bring brick and mortar online by placing beacons around your building.
               </h5>
             </div>
           </div>
@@ -338,11 +349,20 @@
             <a href="https://spotsense.io" target="_blank">SpotSense</a>.
           </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-6">
           <ul class="nav nav-footer justify-content-end">
             <li class="nav-item">
               <!-- TODO: make this a modal window  -->
               <!-- <a id="footer-careers" href="" class="nav-link" target="_blank">Careers</a> -->
+            </li>
+            <li class="nav-item">
+              <a id="footer-about" href="./geofencing.html" class="nav-link">Geofences</a>
+            </li>
+            <li class="nav-item">
+              <a id="footer-about" href="./beacons.html" class="nav-link">Bluetooth Beacons</a>
+            </li>
+            <li class="nav-item">
+              <a id="footer-about" href="./integrations.html" class="nav-link">Integrations</a>
             </li>
             <li class="nav-item">
               <a id="footer-about" href="./about.html" class="nav-link">About</a>
@@ -456,7 +476,7 @@
     analytics.trackLink(link, 'Clicked on CTA', {
       location: 'Header',
       color: 'White',
-      text: 'See all integrations',
+      text: 'All integrations',
       CTA: 'Segment integrations',
       category: 'Integrations Page',
       type: 'Button',
