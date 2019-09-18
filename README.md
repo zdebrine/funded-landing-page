@@ -1,4 +1,4 @@
-# Landing page for SpotSense.io
+# Landing page for Funded
 
 ## How to get started:
 
@@ -21,5 +21,4 @@ Bad Examples:
 * just using your name
 * using random strings of words
 
-Hit Jonny up with any questions!
 # funded-landing-page
